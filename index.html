@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="h-full">
+<html lang="id" class="h-full scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,8 @@
 </head>
 <body class="h-full overflow-x-hidden">
 
-  <div id="loader" class="fixed inset-0 z-[10000] bg-[#020205] flex flex-col items-center justify-center">
-      <div class="text-white text-xs font-bold tracking-[0.5em] mb-4 uppercase">Loading Experience</div>
+  <div id="loader" class="fixed inset-0 z-[10000] bg-[#020205] flex flex-col items-center justify-center transition-transform duration-800 ease-out">
+      <div class="text-white text-xs font-bold tracking-[0.5em] mb-4 uppercase" data-i18n="loader.text">Loading Experience</div>
       <div class="w-64 h-[2px] bg-white/10 rounded-full overflow-hidden">
           <div id="progress" class="h-full bg-cyan-400 w-0"></div>
       </div>
@@ -30,23 +30,25 @@
 
   <div class="liquid-bg"></div>
 
-  <nav class="fixed top-0 w-full z-50 px-6 py-4 transition-colors duration-300">
-    <div class="max-w-6xl mx-auto glass flex items-center justify-between px-8 py-4">
-      <span class="text-2xl font-black tracking-tighter uppercase">AFIF<span class="text-violet-500">.</span></span>
+  <nav class="fixed top-0 w-full z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto glass flex items-center justify-between px-8 py-4">
+      <a href="#home" class="text-2xl font-black tracking-tighter uppercase magnetic-target">AFIF<span class="text-violet-500">.</span></a>
       
-      <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400 items-center">
+      <div class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400 items-center">
         <a href="#about" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.about">TENTANG</a>
         <a href="#work" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.works">KARYA</a>
-        <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.experience">PERJALANAN</a>
+        <a href="#workflow" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.process">PROSES</a>
+        <a href="#journey" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.experience">PERJALANAN</a>
         <a href="#rate-card" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.pricing">HARGA</a>
+        <a href="#faq" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.faq">FAQ</a>
         
-        <select id="langSwitcher" class="bg-transparent border border-white/20 text-white rounded outline-none cursor-pointer hover:border-cyan-400 transition-colors text-[10px] font-bold">
+        <select id="langSwitcher" class="bg-transparent text-white rounded outline-none cursor-pointer hover:text-cyan-400 transition-colors text-[10px] font-bold">
           <option value="id" class="bg-black text-white">ID</option>
           <option value="en" class="bg-black text-white">EN</option>
         </select>
       </div>
 
-      <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black hover:bg-cyan-400 transition" data-i18n="nav.cta">HUBUNGI</a>
+      <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black hover:bg-cyan-400 transition-all magnetic-target" data-i18n="nav.cta">HUBUNGI</a>
     </div>
   </nav>
 
@@ -57,28 +59,41 @@
         SENIMAN VISUAL BERBASIS AI
       </div>
       <h1 class="fade-in-up text-7xl md:text-9xl font-black mb-8 tracking-tighter leading-[0.85] uppercase">
-        EDIT. <span class="gradient-text">ELEVATE.</span><br>REPEAT.
+        EDIT. <span class="gradient-text shine-anim">ELEVATE.</span><br>REPEAT.
       </h1>
       <p class="fade-in-up text-gray-400 text-lg md:text-xl max-w-2xl mb-12 font-light leading-relaxed" data-i18n="hero.desc">
         Bukan sekadar memotong klip. Saya merangkai cerita sinematik, fotografi profesional, dan visual berbasis AI.
       </p>
       <div class="fade-in-up flex gap-6">
-        <a href="#work" class="bg-violet-600 hover:bg-violet-700 text-white px-10 py-5 rounded-2xl font-black text-sm transition-all shadow-xl shadow-violet-500/20" data-i18n="hero.btn_work">LIHAT KARYA</a>
-        <a href="#contact" class="glass px-10 py-5 rounded-2xl font-black text-sm hover:bg-white/10 transition-all">LET'S TALK</a>
+        <a href="#work" class="bg-violet-600 hover:bg-violet-700 text-white px-10 py-5 rounded-2xl font-black text-sm transition-all shadow-xl shadow-violet-500/20 magnetic-target" data-i18n="hero.btn_work">LIHAT KARYA</a>
+        <a href="#contact" class="glass px-10 py-5 rounded-2xl font-black text-sm hover:bg-white/10 transition-all magnetic-target" data-i18n="hero.btn_talk">LET'S TALK</a>
       </div>
     </section>
 
-    <section id="about" class="max-w-6xl mx-auto px-6">
+    <section class="py-16 border-y border-white/5 bg-black/40 relative overflow-hidden">
+        <div class="infinite-marquee flex gap-12 text-gray-700 text-sm font-black uppercase tracking-[0.4em] whitespace-nowrap">
+            <span data-i18n="trust.agencies">Top agencies</span> &bull; 
+            <span data-i18n="trust.wedding">Wedding planners</span> &bull; 
+            <span data-i18n="trust.documentary">Documentary crews</span> &bull; 
+            <span data-i18n="trust.brands">Brands cross industries</span> &bull; 
+            <span data-i18n="trust.creative">Creative directors</span> &bull; 
+            <span data-i18n="trust.wedding">Wedding planners</span> &bull; 
+            <span data-i18n="trust.brands">Brands cross industries</span> &bull; 
+            <span data-i18n="trust.creative">Creative directors</span>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 py-32">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center text-left">
         <div class="fade-in-up">
-          <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-violet-500 mb-6">Expertise & Philosophy</h2>
-          <h3 class="text-4xl md:text-5xl font-bold mb-8 leading-tight italic">Merging Tech <br>with <span class="gradient-text">Soul.</span></h3>
+          <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-violet-500 mb-6" data-i18n="about.subtitle">Expertise & Philosophy</h2>
+          <h3 class="text-4xl md:text-5xl font-bold mb-8 leading-tight italic" data-i18n="about.title">Merging Tech with <span class="gradient-text shine-anim">Soul.</span></h3>
           
-          <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+          <p class="text-gray-300 text-lg mb-6 leading-relaxed" data-i18n="about.desc1">
             Halo! Saya Afif, seorang <strong>Visual Storyteller</strong> yang percaya bahwa setiap <em>frame</em> memiliki jiwa. Saya menggabungkan teknis pewarnaan (<strong>Color Science</strong>) dengan narasi emosional untuk menciptakan konten yang tidak hanya indah secara visual, tetapi juga resonan secara mendalam dengan audiens.
           </p>
           
-          <p class="text-gray-400 text-md mb-8 leading-relaxed">
+          <p class="text-gray-400 text-md mb-8 leading-relaxed" data-i18n="about.desc2">
             Bagi saya, video editing bukan sekadar menyambung potongan klip, melainkan tentang membangun koneksi emosional dengan audiens melalui transisi yang mulus, <em>sound design</em> yang presisi, dan color grading yang menceritakan kisah sendiri. Setiap project adalah kesempatan untuk menciptakan pengalaman visual yang tak terlupakan.
           </p>
 
@@ -92,119 +107,161 @@
           </div>
         </div>
 
-        <div class="glass p-10 grid grid-cols-1 gap-8 fade-in-up" style="transition-delay: 200ms;">
+        <div class="glass p-10 grid grid-cols-1 gap-8 fade-in-up glass-target" style="transition-delay: 200ms;">
             <div class="flex items-start gap-5 group">
                 <div class="p-3 glass bg-cyan-500/10 text-cyan-400"><i data-lucide="zap" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="font-bold mb-1 uppercase text-sm">Post-Production Expert</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Mahir menggunakan DaVinci Resolve untuk Color Grading sinematik dan Premiere/CapCut untuk editing cepat.</p>
+                    <h4 class="font-bold mb-1 uppercase text-sm" data-i18n="about.role1_title">Post-Production Expert</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed" data-i18n="about.role1_desc">Mahir menggunakan DaVinci Resolve untuk Color Grading sinematik dan Premiere/CapCut untuk editing cepat.</p>
                 </div>
             </div>
             <div class="flex items-start gap-5 group">
                 <div class="p-3 glass bg-violet-500/10 text-violet-400"><i data-lucide="camera" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="font-bold mb-1 uppercase text-sm">Professional Retouching</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Spesialis editing foto menggunakan Adobe Lightroom untuk hasil tone warna yang konsisten dan premium.</p>
+                    <h4 class="font-bold mb-1 uppercase text-sm" data-i18n="about.role2_title">Professional Retouching</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed" data-i18n="about.role2_desc">Spesialis editing foto menggunakan Adobe Lightroom untuk hasil tone warna yang konsisten dan premium.</p>
                 </div>
             </div>
             <div class="flex items-start gap-5 group">
                 <div class="p-3 glass bg-orange-500/10 text-orange-400"><i data-lucide="cpu" class="w-5 h-5"></i></div>
                 <div>
-                    <h4 class="font-bold mb-1 uppercase text-sm">Visual AI Integrator</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Mengimplementasikan AI (Midjourney/Firefly) untuk menciptakan aset visual unik yang memukau.</p>
+                    <h4 class="font-bold mb-1 uppercase text-sm" data-i18n="about.role3_title">Visual AI Integrator</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed" data-i18n="about.role3_desc">Mengimplementasikan AI (Midjourney/Firefly) untuk menciptakan aset visual unik yang memukau.</p>
                 </div>
             </div>
         </div>
       </div>
     </section>
 
-    <section id="work" class="max-w-6xl mx-auto px-6">
+    <section id="work" class="max-w-6xl mx-auto px-6 py-32">
       <div class="text-center mb-16 fade-in-up">
-        <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Niche <span class="gradient-text">Mastery</span></h2>
+        <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="work.subtitle">Visual Impact</h2>
+        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="work.title">Color Grading & <span class="gradient-text shine-anim">AI Art</span> Mastery</h3>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="glass md:col-span-2 overflow-hidden relative group min-h-[400px] fade-in-up">
-          <video id="bgVideo" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
-            <source src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778043163/maharani_hmioqh.mp4" type="video/mp4">
-          </video>
-          <div class="relative z-10 p-10 h-full flex flex-col justify-end bg-gradient-to-t from-black via-transparent text-left pointer-events-none">
-            <h3 class="text-3xl font-black text-white mb-2 uppercase tracking-tighter">Maharani Cinematic</h3>
-            <p class="text-gray-400 text-xs tracking-widest uppercase">CapCut • 4K Storytelling</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center mb-32 reveal-work">
+          <div class="md:col-span-2 text-left">
+            <h4 class="text-accent text-xs tracking-widest mb-2 uppercase font-bold">CapCut &bull; 4K STORYTELLING</h4>
+            <h3 class="text-3xl font-black text-white mb-6 uppercase tracking-tighter">Maharani Cinematic</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8" data-i18n="work.desc1"><strong>Masalah:</strong> Klien membutuhkan video perjalanan yang emosional tetapi efisien dalam pengerjaan.<br><br><strong>Solusi:</strong> Menggunakan CapCut, saya memadukan *storytelling* yang kuat dengan pewarnaan yang kohesif dalam resolusi 4K untuk hasil sinematik maksimal.</p>
           </div>
-        </div>
-
-        <div class="glass overflow-hidden relative group min-h-[400px] fade-in-up" style="transition-delay: 150ms;">
-          <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
-            <source src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778051234/26_Feb_-_Cinematic_Miwaa_WM_de0s2x.mp4" type="video/mp4">
-          </video>
-          <div class="relative z-10 p-10 h-full flex flex-col justify-end bg-gradient-to-t from-black via-transparent text-left pointer-events-none">
-            <i data-lucide="smartphone" class="w-8 h-8 text-cyan-400 mb-4"></i>
-            <h3 class="text-xl font-bold text-white mb-2 uppercase tracking-tighter">Viral Reels</h3>
-            <p class="text-xs text-gray-300 font-medium">High-retention editing strategy.</p>
+          <div class="md:col-span-3 glass overflow-hidden relative group aspect-video comparison-slider-container fade-in-up glass-target">
+              <video id="cineAfter" autoplay loop muted playsinline class="w-full h-full object-cover comparison-image after-image">
+                  <source src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778100942/CIne_Test_V2_m64jqe.mov" type="video/mp4">
+              </video>
+              <video id="cineBefore" autoplay loop muted playsinline class="w-full h-full object-cover comparison-image before-image">
+                  <source src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778101733/before_ddkv2w.mp4" type="video/mp4">
+              </video>
+              <div class="slider-handle"></div>
+              <div class="before-after-label before text-[10px] font-black tracking-widest text-cyan-400" data-i18n="work.before">BEFORE (RAW)</div>
+              <div class="before-after-label after text-[10px] font-black tracking-widest text-violet-400" data-i18n="work.after">AFTER (GRADED)</div>
           </div>
-        </div>
+      </div>
 
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center reveal-work">
+          <div class="md:col-span-3 glass overflow-hidden relative group aspect-[9/16] fade-in-up glass-target">
+              <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000">
+                  <source src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778051234/26_Feb_-_Cinematic_Miwaa_WM_de0s2x.mp4" type="video/mp4">
+              </video>
+          </div>
+          <div class="md:col-span-2 text-left">
+              <i data-lucide="smartphone" class="w-12 h-12 text-cyan-400 mb-4"></i>
+              <h3 class="text-2xl font-black text-white mb-2 uppercase tracking-tighter">Viral Reels</h3>
+              <p class="text-sm text-gray-300 font-medium leading-relaxed" data-i18n="work.desc2">Strategi editing beresolusi tinggi dengan retensi tinggi untuk memaksimalkan performa *engagement* di *Short-Form Platforms*.</p>
+          </div>
       </div>
     </section>
 
-    <section id="experience" class="timeline-section">
+    <section id="workflow" class="max-w-6xl mx-auto px-6 py-32 bg-white/3 backdrop-blur-3xl border-y border-white/5">
+        <div class="text-center mb-16 fade-in-up">
+          <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-violet-500 mb-4" data-i18n="process.subtitle">Creative SOP</h2>
+          <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="process.title">Our <span class="gradient-text shine-anim">Collaborative</span> Process</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 100ms;">
+                <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="lightbulb" class="w-6 h-6"></i></div>
+                <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="process.step1">STEP 01</h4>
+                <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter" data-i18n="process.q1">Discovery & Brief</h3>
+                <p class="text-xs text-gray-400 leading-relaxed" data-i18n="process.a1">Sesi mendalam untuk memahami visi, identitas brand, dan tujuan emosional yang ingin Anda capai.</p>
+            </div>
+            <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 200ms;">
+                <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="process.step2">STEP 02</h4>
+                <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter" data-i18n="process.q2">AI Generation</h3>
+                <p class="text-xs text-gray-400 leading-relaxed" data-i18n="process.a2">Menggunakan AI (Midjourney/Firefly) untuk menciptakan aset visual unik, *storyboard*, atau referensi visual.</p>
+            </div>
+            <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 300ms;">
+                <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="clapperboard" class="w-6 h-6"></i></div>
+                <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="process.step3">STEP 03</h4>
+                <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter" data-i18n="process.q3">Post-Production</h3>
+                <p class="text-xs text-gray-400 leading-relaxed" data-i18n="process.a3">Proses inti: editing cepat, *advanced color grading* (DaVinci/Resolve), dan *sound design* sinematik.</p>
+            </div>
+            <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 400ms;">
+                <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="send" class="w-6 h-6"></i></div>
+                <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="process.step4">STEP 04</h4>
+                <h3 class="text-lg font-bold text-white mb-4 uppercase tracking-tighter" data-i18n="process.q4">Final Delivery</h3>
+                <p class="text-xs text-gray-400 leading-relaxed" data-i18n="process.a4">Ekspor resolusi maksimal (4K) dan penyerahan aset via *cloud storage* premium dengan stabilitas tinggi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="timeline-section py-32">
       <div class="timeline-container">
-        <h2 class="timeline-title uppercase tracking-tighter fade-in-up">Professional <span class="gradient-text">Journey</span></h2>
+        <h2 class="timeline-title uppercase tracking-tighter fade-in-up" data-i18n="journey.title">Professional <span class="gradient-text shine-anim">Journey</span></h2>
         <div class="timeline">
           
           <div class="timeline-item fade-in-up">
             <div class="timeline-dot"></div>
-            <div class="timeline-content text-left">
+            <div class="timeline-content text-left glass-target">
               <div class="timeline-date">2026 - Present</div>
               <div class="timeline-company">AI-Powered Branding Project</div>
-              <div class="timeline-role uppercase font-bold text-cyan-400">UI/UX Designer & Web Developer</div>
+              <div class="timeline-role uppercase font-bold text-cyan-400" data-i18n="journey.role1">UI/UX Designer & Web Developer</div>
               <ul class="timeline-bullets mt-5 space-y-3">
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Merancang & membangun ekosistem digital premium berbasis kolaborasi AI (Gemini, Blackbox, Canva).</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Mengintegrasikan <em>live prototyping</em> dan desain UI interaktif untuk <em>user experience</em> kelas atas.</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Mengelola infrastruktur arsitektur web hingga <em>deployment</em> global via GitHub & Netlify.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc1_1">Merancang & membangun ekosistem digital premium berbasis kolaborasi AI (Gemini, Blackbox, Canva).</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc1_2">Mengintegrasikan <em>live prototyping</em> dan desain UI interaktif untuk <em>user experience</em> kelas atas.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc1_3">Mengelola infrastruktur arsitektur web hingga <em>deployment</em> global via GitHub & Netlify.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item fade-in-up">
             <div class="timeline-dot"></div>
-            <div class="timeline-content text-left">
+            <div class="timeline-content text-left glass-target">
               <div class="timeline-date">Jan 2026 - Mei 2026</div>
               <div class="timeline-company">UMROHMOMENT</div>
-              <div class="timeline-role uppercase font-bold text-violet-500">Lead Content Specialist & Editor</div>
+              <div class="timeline-role uppercase font-bold text-violet-500" data-i18n="journey.role2">Lead Content Specialist & Editor</div>
               <ul class="timeline-bullets mt-5 space-y-3">
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Mengelola <em>end-to-end</em> produksi konten harian perjalanan ibadah Umroh.</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Memadukan efisiensi <em>post-production</em> dengan gaya penceritaan sinematik (CapCut).</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Fokus menyajikan narasi emosional yang sukses meningkatkan <em>engagement</em> audiens.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc2_1">Mengelola <em>end-to-end</em> produksi konten harian perjalanan ibadah Umroh.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc2_2">Memadukan efisiensi <em>post-production</em> dengan gaya penceritaan sinematik (CapCut).</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc2_3">Fokus menyajikan narasi emosional yang sukses meningkatkan <em>engagement</em> audiens.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item fade-in-up">
             <div class="timeline-dot"></div>
-            <div class="timeline-content text-left">
+            <div class="timeline-content text-left glass-target">
               <div class="timeline-date">2024 - Present</div>
               <div class="timeline-company">Self-Employed</div>
-              <div class="timeline-role uppercase font-bold text-cyan-400">Freelance Visual Creator</div>
+              <div class="timeline-role uppercase font-bold text-cyan-400" data-i18n="journey.role3">Freelance Visual Creator</div>
               <ul class="timeline-bullets mt-5 space-y-3">
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Menerjemahkan visi klien lintas industri menjadi mahakarya visual dan video komersial.</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Dipercaya memimpin eksekusi dokumentasi premium (Wedding, Graduation, Corporate).</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold">Merumuskan identitas visual & tata warna brand menggunakan Adobe Lightroom dan Canva.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc3_1">Menerjemahkan visi klien lintas industri menjadi mahakarya visual dan video komersial.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc3_2">Dipercaya memimpin eksekusi dokumentasi premium (Wedding, Graduation, Corporate).</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-cyan-400 before:font-bold" data-i18n="journey.desc3_3">Merumuskan identitas visual & tata warna brand menggunakan Adobe Lightroom dan Canva.</li>
               </ul>
             </div>
           </div>
 
           <div class="timeline-item fade-in-up">
             <div class="timeline-dot"></div>
-            <div class="timeline-content text-left">
+            <div class="timeline-content text-left glass-target">
               <div class="timeline-date">2022 - 2024</div>
               <div class="timeline-company">Aceh Documentary</div>
-              <div class="timeline-role uppercase font-bold text-violet-500">Videographer, Editor & Crew</div>
+              <div class="timeline-role uppercase font-bold text-violet-500" data-i18n="journey.role4">Videographer, Editor & Crew</div>
               <ul class="timeline-bullets mt-5 space-y-3">
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Titik awal pendalaman seni <em>visual storytelling</em> dan dinamika lapangan produksi dokumenter.</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Berperan krusial merakit <em>raw footage</em> menjadi narasi visual yang kohesif via DaVinci Resolve.</li>
-                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold">Bertanggung jawab atas kelancaran operasional dan dokumentasi esensial <em>Behind the Scenes</em>.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc4_1">Titik awal pendalaman seni <em>visual storytelling</em> dan dinamika lapangan produksi dokumenter.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc4_2">Berperan krusial merakit <em>raw footage</em> menjadi narasi visual yang kohesif via DaVinci Resolve.</li>
+                <li class="relative pl-5 text-gray-300 text-sm leading-relaxed before:content-['→'] before:absolute before:left-0 before:text-violet-400 before:font-bold" data-i18n="journey.desc4_3">Bertanggung jawab atas kelancaran operasional dan dokumentasi esensial <em>Behind the Scenes</em>.</li>
               </ul>
             </div>
           </div>
@@ -213,53 +270,55 @@
       </div>
     </section>
 
-    <section id="rate-card" class="max-w-6xl mx-auto px-6">
+    <section id="rate-card" class="max-w-6xl mx-auto px-6 py-32">
         <div class="text-center mb-16 fade-in-up">
-          <h2 class="text-4xl font-bold mb-4 uppercase tracking-tighter">Rate <span class="gradient-text">Card</span></h2>
-          <p class="text-gray-400 text-sm max-w-2xl mx-auto">Setiap paket dirancang untuk memberikan nilai maksimal. Pilih sesuai kebutuhan Anda atau diskusikan custom solution.</p>
+          <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="pricing.subtitle">Investment</h2>
+          <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="pricing.title">Our Rate <span class="gradient-text shine-anim">Card</span></h3>
+          <p class="text-gray-400 text-sm max-w-2xl mx-auto mt-6 leading-relaxed" data-i18n="pricing.desc">Setiap paket dirancang untuk memberikan nilai maksimal. Pilih sesuai kebutuhan Anda atau diskusikan custom solution.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="glass p-10 flex flex-col transition-all fade-in-up">
+          <div class="glass p-10 flex flex-col transition-all fade-in-up glass-target">
             <h3 class="text-lg font-bold mb-2 uppercase text-cyan-400">Short-Form</h3>
             <div class="text-3xl font-black mb-2">Rp 350rb<span class="text-xs text-gray-500 font-normal"> /video</span></div>
-            <div class="text-xs text-gray-400 mb-6 leading-relaxed">
+            <div class="text-xs text-gray-400 mb-6 leading-relaxed" data-i18n="pricing.short.desc">
               <strong>Cocok untuk:</strong> TikTok, Reels, YouTube Shorts<br><br>
               <strong>Included:</strong> Editing profesional, color grading dasar, transisi smooth, background music, 1x revision
             </div>
-            <a href="#contact" class="w-full py-4 glass text-center text-[10px] font-black hover:bg-cyan-500 hover:text-black transition-all uppercase tracking-widest mt-auto">Select Plan</a>
+            <a href="#contact" class="w-full py-4 glass text-center text-[10px] font-black hover:bg-cyan-500 hover:text-black transition-all uppercase tracking-widest mt-auto magnetic-target">Select Plan</a>
           </div>
 
-          <div class="glass p-10 scale-105 border-violet-500/50 shadow-2xl bg-violet-600/5 flex flex-col relative fade-in-up" style="transition-delay: 150ms;">
-            <div class="absolute top-0 right-0 bg-violet-600 text-[8px] font-black px-4 py-1.5 rounded-bl-xl uppercase text-white">Best Value</div>
+          <div class="glass p-10 scale-105 border-violet-500/50 shadow-2xl bg-violet-600/5 flex flex-col relative fade-in-up glass-target" style="transition-delay: 150ms;">
+            <div class="absolute top-0 right-0 bg-violet-600 text-[8px] font-black px-4 py-1.5 rounded-bl-xl uppercase text-white" data-i18n="pricing.best">Best Value</div>
             <h3 class="text-lg font-bold mb-2 uppercase text-white">Cinematic Story</h3>
             <div class="text-3xl font-black mb-2 text-violet-400">Rp 1.5jt<span class="text-sm text-white/50 font-normal"> /project</span></div>
-            <div class="text-xs text-gray-300 mb-6 leading-relaxed">
+            <div class="text-xs text-gray-300 mb-6 leading-relaxed" data-i18n="pricing.cine.desc">
               <strong>Cocok untuk:</strong> Wedding, Campaign Video, Documentary, Brand Story<br><br>
               <strong>Included:</strong> Advanced color grading, motion graphics, premium transitions, full sound design, unlimited revisions, 4K export
             </div>
-            <a href="#contact" class="w-full py-4 bg-violet-600 text-center text-[10px] font-black rounded-xl hover:bg-violet-700 transition-all text-white uppercase tracking-widest mt-auto">Hire Now</a>
+            <a href="#contact" class="w-full py-4 bg-violet-600 text-center text-[10px] font-black rounded-xl hover:bg-violet-700 transition-all text-white uppercase tracking-widest mt-auto magnetic-target">Hire Now</a>
           </div>
 
-          <div class="glass p-10 flex flex-col transition-all fade-in-up" style="transition-delay: 250ms;">
+          <div class="glass p-10 flex flex-col transition-all fade-in-up glass-target" style="transition-delay: 250ms;">
             <h3 class="text-lg font-bold mb-2 uppercase text-orange-400">Full Brand</h3>
             <div class="text-3xl font-black mb-2 uppercase">Custom</div>
-            <div class="text-xs text-gray-400 mb-6 leading-relaxed">
+            <div class="text-xs text-gray-400 mb-6 leading-relaxed" data-i18n="pricing.full.desc">
               <strong>Cocok untuk:</strong> Brand Campaign, Multi-content Strategy, Agency Projects<br><br>
               <strong>Included:</strong> Custom quote, strategi konten, extended collaboration, priority support, white-label option
             </div>
-            <a href="#contact" class="w-full py-4 glass text-center text-[10px] font-black hover:bg-white/10 transition-all uppercase tracking-widest mt-auto">Contact Me</a>
+            <a href="#contact" class="w-full py-4 glass text-center text-[10px] font-black hover:bg-white/10 transition-all uppercase tracking-widest mt-auto magnetic-target">Contact Me</a>
           </div>
         </div>
     </section>
-    <section id="faq" class="max-w-4xl mx-auto px-6 pb-32">
+
+    <section id="faq" class="max-w-4xl mx-auto px-6 py-32">
       <div class="text-center mb-16 fade-in-up">
         <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="faq.subtitle">Client Concerns</h2>
-        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="faq.title">Frequently Asked <span class="gradient-text">Questions</span></h3>
+        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="faq.title">Frequently Asked <span class="gradient-text shine-anim">Questions</span></h3>
       </div>
 
       <div class="space-y-4">
-        <div class="faq-item glass overflow-hidden fade-in-up">
-          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group">
+        <div class="faq-item glass overflow-hidden fade-in-up glass-target">
+          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group magnetic-target">
             <span class="font-bold text-sm text-white group-hover:text-cyan-400 transition-colors uppercase tracking-wide" data-i18n="faq.q1">Berapa lama estimasi pengerjaan project?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-400"></i>
           </button>
@@ -268,8 +327,8 @@
           </div>
         </div>
 
-        <div class="faq-item glass overflow-hidden fade-in-up" style="transition-delay: 100ms;">
-          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group">
+        <div class="faq-item glass overflow-hidden fade-in-up glass-target" style="transition-delay: 100ms;">
+          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group magnetic-target">
             <span class="font-bold text-sm text-white group-hover:text-cyan-400 transition-colors uppercase tracking-wide" data-i18n="faq.q2">Bagaimana sistem revisinya?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-400"></i>
           </button>
@@ -278,8 +337,8 @@
           </div>
         </div>
 
-        <div class="faq-item glass overflow-hidden fade-in-up" style="transition-delay: 200ms;">
-          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group">
+        <div class="faq-item glass overflow-hidden fade-in-up glass-target" style="transition-delay: 200ms;">
+          <button class="faq-btn w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group magnetic-target">
             <span class="font-bold text-sm text-white group-hover:text-cyan-400 transition-colors uppercase tracking-wide" data-i18n="faq.q3">Apakah saya akan mendapatkan file mentah (Raw Files)?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-500 transition-transform duration-400"></i>
           </button>
@@ -290,29 +349,30 @@
       </div>
     </section>
 
-    <section id="contact" class="max-w-4xl mx-auto px-6 pb-40">
-      <div class="glass p-16 text-center border-violet-500/30 relative overflow-hidden fade-in-up">
-        <h2 class="text-5xl font-black mb-12 uppercase tracking-tighter leading-none">READY TO <br><span class="gradient-text">SCALE?</span></h2>
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-32 pb-64 relative overflow-hidden">
+      <div class="glow-spot bg-radial-gradient-white opacity-10 blur-3xl w-[1000px] h-[1000px] -z-10 absolute left-1/2 -top-1/2 -translate-x-1/2"></div>
+      <div class="glass p-16 text-center border-violet-500/30 relative overflow-hidden fade-in-up glass-target">
+        <h2 class="text-5xl font-black mb-12 uppercase tracking-tighter leading-none" data-i18n="contact.title">READY TO <br><span class="gradient-text shine-anim">SCALE?</span></h2>
         
         <div class="mb-12">
-          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-300 mb-8">Direct Contact</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <a href="mailto:afifm192@gmail.com" class="p-6 glass hover:border-cyan-500/50 hover:bg-cyan-500/5 transition group">
+          <h3 class="text-sm font-bold uppercase tracking-widest text-gray-300 mb-8" data-i18n="contact.subtitle">Direct Contact</h3>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="mailto:afifm192@gmail.com" class="p-6 glass hover:border-cyan-500/50 hover:bg-cyan-500/5 transition group magnetic-target">
               <i data-lucide="mail" class="w-8 h-8 mb-3 text-cyan-400 group-hover:scale-110 transition mx-auto"></i>
               <div class="text-[10px] font-black text-gray-300">Email</div>
               <div class="text-xs text-cyan-400 mt-1">afifm192@gmail.com</div>
             </a>
-            <a href="https://wa.me/6282350241418" target="_blank" class="p-6 glass hover:border-green-500/50 hover:bg-green-500/5 transition group">
+            <a href="https://wa.me/6282350241418" target="_blank" class="p-6 glass hover:border-green-500/50 hover:bg-green-500/5 transition group magnetic-target">
               <i data-lucide="message-circle" class="w-8 h-8 mb-3 text-green-400 group-hover:scale-110 transition mx-auto"></i>
               <div class="text-[10px] font-black text-gray-300">WhatsApp</div>
               <div class="text-xs text-green-400 mt-1">+62 823 5024 1418</div>
             </a>
-            <a href="https://instagram.com/_afif16" target="_blank" class="p-6 glass hover:border-pink-500/50 hover:bg-pink-500/5 transition group">
+            <a href="https://instagram.com/_afif16" target="_blank" class="p-6 glass hover:border-pink-500/50 hover:bg-pink-500/5 transition group magnetic-target">
               <i data-lucide="instagram" class="w-8 h-8 mb-3 text-pink-400 group-hover:scale-110 transition mx-auto"></i>
               <div class="text-[10px] font-black text-gray-300">Instagram</div>
               <div class="text-xs text-pink-400 mt-1">@_afif16</div>
             </a>
-            <a href="https://www.tiktok.com/@apippppo" target="_blank" class="p-6 glass hover:border-purple-500/50 hover:bg-purple-500/5 transition group">
+            <a href="https://www.tiktok.com/@apippppo" target="_blank" class="p-6 glass hover:border-purple-500/50 hover:bg-purple-500/5 transition group magnetic-target">
               <i data-lucide="video" class="w-8 h-8 mb-3 text-purple-400 group-hover:scale-110 transition mx-auto"></i>
               <div class="text-[10px] font-black text-gray-300">TikTok</div>
               <div class="text-xs text-purple-400 mt-1">@apippppo</div>
@@ -321,7 +381,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="mailto:afifm192@gmail.com" class="inline-flex items-center gap-2 bg-white text-black px-16 py-5 rounded-2xl font-black hover:bg-cyan-400 transition-all text-md shadow-2xl uppercase tracking-tighter">
+          <a href="mailto:afifm192@gmail.com" class="inline-flex items-center gap-2 bg-white text-black px-16 py-5 rounded-2xl font-black hover:bg-cyan-400 transition-all text-md shadow-2xl uppercase tracking-tighter magnetic-target" data-i18n="contact.btn">
             <i data-lucide="send" class="w-5 h-5"></i>
             Get In Touch
           </a>
