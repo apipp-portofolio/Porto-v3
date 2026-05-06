@@ -149,3 +149,17 @@ section { padding: 120px 0; }
   0%, 100% { transform: translateY(0); } 
   50% { transform: translateY(-15px); } 
 }
+/* Styling Baru untuk Script GSAP & Preloader */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Memperhalus Interaksi Kursor Default */
+body {
+    cursor: none; /* Sembunyikan cursor bawaan untuk pakai custom cursor */
+}
+
+a, button, select {
+    cursor: none; 
+}
