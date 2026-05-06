@@ -16,9 +16,14 @@ body {
   color: #f5f5f7; 
   overflow-x: hidden; 
   margin: 0; 
+  cursor: none; /* Sembunyikan cursor bawaan untuk pakai custom cursor */
 }
 
-/* Background Efek Liquid */
+a, button, select {
+    cursor: none; 
+}
+
+/* --- AMBIENT MOTION GRAPHICS --- */
 .liquid-bg {
   position: fixed; 
   inset: 0;
@@ -27,6 +32,12 @@ body {
     radial-gradient(circle at 85% 75%, rgba(0, 242, 254, 0.12) 0%, transparent 45%);
   z-index: -1; 
   filter: blur(80px);
+  animation: liquidMove 20s ease-in-out infinite alternate;
+}
+@keyframes liquidMove {
+    0% { transform: scale(1) translate(0, 0); }
+    50% { transform: scale(1.1) translate(3%, 2%); }
+    100% { transform: scale(1) translate(-2%, -3%); }
 }
 
 .glow-spot {
@@ -36,20 +47,30 @@ body {
   background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
   filter: blur(100px); 
   z-index: -1;
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+@keyframes pulseGlow {
+    0% { opacity: 0.4; transform: scale(0.8); }
+    100% { opacity: 0.8; transform: scale(1.2); }
 }
 
-/* Jarak Antar Section */
+.gradient-text {
+  background: linear-gradient(135deg, var(--cyan) 0%, #fff 45%, var(--violet) 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+  background-size: 200% auto;
+  animation: shineText 5s linear infinite;
+}
+@keyframes shineText {
+    to { background-position: 200% center; }
+}
+
+/* Jarak Antar Section & State Awal Animasi GSAP */
 section { padding: 120px 0; }
-
-/* Animasi Muncul (Reveal) */
-.reveal { 
-  opacity: 0; 
-  transform: translateY(40px); 
-  transition: all 0.8s ease-out; 
-}
-.reveal.visible { 
-  opacity: 1; 
-  transform: translateY(0); 
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 /* Efek Kaca (Glassmorphism) */
@@ -63,13 +84,6 @@ section { padding: 120px 0; }
 .glass:hover {
   border-color: rgba(0, 242, 254, 0.4);
   box-shadow: 0 0 40px rgba(0, 242, 254, 0.1);
-}
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--cyan) 0%, #fff 45%, var(--violet) 100%);
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
 }
 
 .skill-badge {
@@ -102,11 +116,7 @@ section { padding: 120px 0; }
   margin-bottom: 4rem; 
   position: relative; 
   width: 100%; 
-  opacity: 0; 
-  transform: translateY(30px); 
-  transition: all 0.8s ease; 
 }
-.timeline-item.visible { opacity: 1; transform: translateY(0); }
 
 .timeline-item:nth-child(odd) { text-align: right; padding-right: 52%; }
 .timeline-item:nth-child(even) { text-align: left; padding-left: 52%; }
@@ -118,11 +128,12 @@ section { padding: 120px 0; }
   width: 16px; 
   height: 16px;
   background: var(--cyan); 
-  border: 3px solid #000; 
+  border: 3px solid var(--bg-dark);
   border-radius: 50%;
   transform: translateX(-50%); 
   box-shadow: 0 0 20px var(--cyan); 
   z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-content {
@@ -131,35 +142,49 @@ section { padding: 120px 0; }
   border: 1px solid rgba(0, 242, 254, 0.2); 
   border-radius: 16px; 
   padding: 2rem;
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: rgba(0, 242, 254, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 242, 254, 0.1);
+    transform: translateY(-5px);
+}
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.3);
+    box-shadow: 0 0 30px var(--cyan);
 }
 
 .timeline-date { font-size: 0.9rem; color: var(--cyan); font-weight: 700; margin-bottom: 0.5rem; }
 .timeline-bullets { list-style: none; padding: 0; margin-top: 1rem; text-align: left;}
-.timeline-item:nth-child(odd) .timeline-bullets { text-align: right; }
 
 @media (max-width: 768px) {
-  .timeline::before, .timeline-dot { left: 20px; transform: none; }
+  .timeline::before { left: 20px; transform: none; }
+  .timeline-dot { left: 13px; transform: none; }
   .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { text-align: left; padding-left: 50px; padding-right: 0; }
-  .timeline-item:nth-child(odd) .timeline-bullets { text-align: left; }
+  .timeline-item:hover .timeline-dot { transform: scale(1.3); }
 }
 
-/* Animasi Mengambang untuk teks Hero */
+/* Animasi Mengambang Hero */
 .float { animation: float 6s ease-in-out infinite; }
 @keyframes float { 
   0%, 100% { transform: translateY(0); } 
   50% { transform: translateY(-15px); } 
 }
-/* Styling Baru untuk Script GSAP & Preloader */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-}
 
-/* Memperhalus Interaksi Kursor Default */
-body {
-    cursor: none; /* Sembunyikan cursor bawaan untuk pakai custom cursor */
+/* --- UI/UX FIXES (Scrollbar & Dropdown) --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.3);
+  border-radius: 10px;
 }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
 
-a, button, select {
-    cursor: none; 
+select#langSwitcher {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 0.5rem; 
+  text-align: center;
 }
