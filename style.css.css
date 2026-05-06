@@ -1,0 +1,143 @@
+/* ===== CORE RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== CUSTOM CLASSES ===== */
+.font-plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+.cursor-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.loader-screen {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+/* ===== NAVIGATION EFFECTS ===== */
+nav {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hire-btn, .hire-btn-sm, .portfolio-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.hire-btn::before, .hire-btn-sm::before, .portfolio-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.hire-btn:hover::before, .hire-btn-sm:hover::before, .portfolio-btn:hover::before {
+    left: 100%;
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+h1 {
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+    .text-5xl { font-size: 3rem !important; }
+    .text-7xl { font-size: 4rem !important; }
+}
+
+/* ===== VIDEO BACKGROUND ===== */
+#bgVideo {
+    will-change: transform;
+    filter: brightness(0.4) contrast(1.1);
+}
+
+/* ===== GLASSMORPHISM ===== */
+.backdrop-blur-sm { backdrop-filter: blur(8px); }
+.backdrop-blur-xl { backdrop-filter: blur(24px); }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #a855f7, #ec4899);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #9333ea, #db2777);
+}
