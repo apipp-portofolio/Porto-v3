@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Afif | Visual Storyteller & AI Artist</title>
+    
+    <meta name="description" content="Portfolio Muhammad Afif - Visual Storyteller spesialis Color Grading, Video Editing, dan AI Visuals.">
+    <link rel="canonical" href="https://apipp-portofolio.github.io/my-portofolio/" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="assets/video/bg-main.mp4" as="video">
+    <link rel="preload" href="style.css" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- i18next -->
+    <script src="https://unpkg.com/i18next@23.5.1/dist/umd/i18next.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-plus-jakarta">
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="hidden md:block cursor-dot"></div>
+
+    <!-- Preloader -->
+    <div id="loader" class="loader-screen">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">AFIF<span class="text-purple-500">.</span></h1>
+            <div class="w-48 h-[1px] bg-white/10 relative overflow-hidden mx-auto">
+                <div id="progress" class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 w-0 h-full"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Video -->
+    <div class="fixed inset-0 -z-10 h-screen w-screen overflow-hidden">
+        <video id="bgVideo" autoplay muted loop playsinline class="h-full w-full object-cover">
+            <source src="assets/video/bg-main.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-black/90"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-xl border-b border-white/10">
+        <a href="#home" class="text-2xl md:text-3xl font-black tracking-tighter group">
+            AFIF<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 group-hover:from-pink-400 group-hover:to-purple-400 transition-all duration-300">.</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8 lg:gap-12 text-xs xl:text-sm font-bold tracking-[0.3em] uppercase">
+            <a href="#about" class="nav-link hover:text-purple-400 transition-all duration-300 relative group" data-i18n="nav.about">ABOUT</a>
+            <a href="#works" class="nav-link hover:text-purple-400 transition-all duration-300 relative group" data-i18n="nav.works">WORKS</a>
+            <a href="#experience" class="nav-link hover:text-purple-400 transition-all duration-300 relative group" data-i18n="nav.experience">JOURNEY</a>
+            <a href="#pricing" class="nav-link hover:text-purple-400 transition-all duration-300 relative group" data-i18n="nav.pricing">RATES</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <select id="langSwitcher" class="bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-1.5 text-xs font-bold outline-none cursor-pointer hover:border-white/40 transition-all">
+                <option value="id">ID</option>
+                <option value="en">EN</option>
+            </select>
+            <a href="https://wa.me/6282350241418?text=Halo%20Afif%2C%20saya%20tertarik%20dengan%20portofolio%20Anda!" 
+               class="hire-btn bg-white text-black px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25" 
+               data-i18n="nav.cta">HIRE ME</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-32 md:py-0 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-purple-400 tracking-[0.5em] text-xs md:text-sm font-bold mb-8 uppercase fade-in-up" data-i18n="hero.sub">
+                AI-POWERED VISUAL ARTIST
+            </span>
+            <h1 class="text-5xl md:text-7xl lg:text-[140px] font-black mb-10 uppercase leading-none fade-in-up delay-1">
+                EDIT. <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-pink-400">ELEVATE.</span> <br>
+                <span class="text-white">REPEAT.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-300 mb-12 md:mb-16 font-light leading-relaxed fade-in-up delay-2" data-i18n="hero.desc">
+                I don't just cut clips. I craft cinematic stories, professional photography, and AI-integrated visuals.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center fade-in-up delay-3">
+                <a href="#works" class="portfolio-btn bg-white/10 backdrop-blur-sm border border-white/20 px-10 py-5 rounded-full font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" data-i18n="hero.btn_work">
+                    VIEW PORTFOLIO
+                </a>
+                <a href="https://wa.me/6282350241418" class="hire-btn-sm bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-5 rounded-full font-bold text-sm tracking-widest uppercase hover:from-pink-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/50">
+                    GET QUOTE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO & Legal Links -->
+    <div class="fixed bottom-6 right-6 md:bottom-8 md:right-8 flex flex-col gap-3 text-xs opacity-50 hover:opacity-100 transition-opacity z-40">
+        <a href="privacy.html" class="hover:text-purple-400 transition-colors">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-400 transition-colors">Terms</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
