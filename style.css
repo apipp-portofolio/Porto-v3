@@ -1,45 +1,151 @@
-/* style.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --cyan: #00F2FE;
+  --violet: #7c3aed;
+  --bg-dark: #020205;
+  --white: #ffffff;
 }
 
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+* { 
+  font-family: 'Sora', sans-serif; 
+  scroll-behavior: smooth; 
+  box-sizing: border-box; 
 }
 
-/* Typography Hierarchy */
-h1 {
-    line-height: 0.85 !important;
+body { 
+  background-color: var(--bg-dark); 
+  color: #f5f5f7; 
+  overflow-x: hidden; 
+  margin: 0; 
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: #050505;
-}
-::-webkit-scrollbar-thumb {
-    background: #a855f7;
-    border-radius: 10px;
-}
-
-/* Glassmorphism Classes */
-.glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* Background Efek Liquid */
+.liquid-bg {
+  position: fixed; 
+  inset: 0;
+  background: 
+    radial-gradient(circle at 15% 25%, rgba(124, 58, 237, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(0, 242, 254, 0.12) 0%, transparent 45%);
+  z-index: -1; 
+  filter: blur(80px);
 }
 
-/* Cursor Blend Mode */
-#cursor {
-    transition: transform 0.15s ease-out, background-color 0.3s;
+.glow-spot {
+  position: absolute; 
+  width: 600px; 
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.2) 0%, transparent 70%);
+  filter: blur(100px); 
+  z-index: -1;
 }
 
-/* Interactive Text Invert */
-.mix-blend-difference {
-    mix-blend-mode: difference;
+/* Jarak Antar Section */
+section { padding: 120px 0; }
+
+/* Animasi Muncul (Reveal) */
+.reveal { 
+  opacity: 0; 
+  transform: translateY(40px); 
+  transition: all 0.8s ease-out; 
+}
+.reveal.visible { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+/* Efek Kaca (Glassmorphism) */
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px); 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px; 
+  transition: all 0.4s ease;
+}
+.glass:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 40px rgba(0, 242, 254, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--cyan) 0%, #fff 45%, var(--violet) 100%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.3));
+}
+
+.skill-badge {
+  background: rgba(124, 58, 237, 0.1); 
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  padding: 0.5rem 1rem; 
+  border-radius: 99px; 
+  font-size: 0.75rem; 
+  font-weight: 700;
+}
+
+/* --- TIMELINE ZIG-ZAG --- */
+.timeline-section { padding: 100px 2rem; }
+.timeline-container { max-width: 900px; margin: 0 auto; position: relative; }
+.timeline-title { font-size: 3rem; text-align: center; margin-bottom: 4rem; }
+.timeline { position: relative; }
+
+.timeline::before {
+  content: ''; 
+  position: absolute; 
+  left: 50%; 
+  top: 0; 
+  bottom: 0; 
+  width: 2px;
+  background: linear-gradient(to bottom, var(--cyan), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item { 
+  margin-bottom: 4rem; 
+  position: relative; 
+  width: 100%; 
+  opacity: 0; 
+  transform: translateY(30px); 
+  transition: all 0.8s ease; 
+}
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+
+.timeline-item:nth-child(odd) { text-align: right; padding-right: 52%; }
+.timeline-item:nth-child(even) { text-align: left; padding-left: 52%; }
+
+.timeline-dot {
+  position: absolute; 
+  left: 50%; 
+  top: 1.5rem; 
+  width: 16px; 
+  height: 16px;
+  background: var(--cyan); 
+  border: 3px solid #000; 
+  border-radius: 50%;
+  transform: translateX(-50%); 
+  box-shadow: 0 0 20px var(--cyan); 
+  z-index: 2;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(0, 242, 254, 0.2); 
+  border-radius: 16px; 
+  padding: 2rem;
+}
+
+.timeline-date { font-size: 0.9rem; color: var(--cyan); font-weight: 700; margin-bottom: 0.5rem; }
+.timeline-bullets { list-style: none; padding: 0; margin-top: 1rem; text-align: left;}
+.timeline-item:nth-child(odd) .timeline-bullets { text-align: right; }
+
+@media (max-width: 768px) {
+  .timeline::before, .timeline-dot { left: 20px; transform: none; }
+  .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { text-align: left; padding-left: 50px; padding-right: 0; }
+  .timeline-item:nth-child(odd) .timeline-bullets { text-align: left; }
+}
+
+/* Animasi Mengambang untuk teks Hero */
+.float { animation: float 6s ease-in-out infinite; }
+@keyframes float { 
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-15px); } 
 }
