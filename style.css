@@ -188,3 +188,24 @@ select#langSwitcher {
   padding-right: 0.5rem; 
   text-align: center;
 }
+/* --- FAQ ACCORDION --- */
+.faq-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-content.open {
+  max-height: 200px; /* Cukup untuk menampung teks deskripsi */
+  opacity: 1;
+}
+
+.faq-btn.active i {
+  transform: rotate(180deg);
+  color: var(--cyan);
+}
+
+.faq-btn.active span {
+  color: var(--cyan);
+}
