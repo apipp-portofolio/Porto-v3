@@ -1,7 +1,0 @@
-my-portofolio/
-├── index.html
-├── style.css
-├── script.js
-├── privacy.html
-├── terms.html
-└── assets/video/bg-main.mp4
