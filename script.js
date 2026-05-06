@@ -3,13 +3,14 @@ document.addEventListener('DOMContentLoaded', initApp);
 window.addEventListener('load', completeLoad);
 
 function initApp() {
-    if (typeof lucide !== 'undefined') lucide.createIcons(); // Render Ikon SVG
+    if (typeof lucide !== 'undefined') lucide.createIcons();
     initI18n();
     initCursor();
     initSmoothScroll();
     registerGSAP(); 
     optimizeVideo(); 
-    initMagneticElements(); // Fitur baru
+    initMagneticElements();
+    initFAQ(); // <--- Panggil di sini
 }
 
 function completeLoad() {
@@ -28,6 +29,14 @@ const resources = {
             "hero.sub": "SENIMAN VISUAL BERBASIS AI",
             "hero.desc": "Bukan sekadar memotong klip. Saya merangkai cerita sinematik, fotografi profesional, dan visual berbasis AI.",
             "hero.btn_work": "LIHAT KARYA"
+            "faq.subtitle": "KEKHAWATIRAN KLIEN",
+            "faq.title": "Pertanyaan yang Sering <span class='gradient-text'>Diajukan</span>",
+            "faq.q1": "Berapa lama estimasi pengerjaan project?",
+            "faq.a1": "Untuk video Short-Form biasanya memakan waktu 2-3 hari kerja. Sedangkan untuk Cinematic Story/Full Brand, proses memakan waktu 1-2 minggu tergantung kompleksitas, karena kami memastikan pewarnaan dan <em>sound design</em> yang sempurna.",
+            "faq.q2": "Bagaimana sistem revisinya?",
+            "faq.a2": "Kami sangat menghargai visi Anda. Paket dasar mencakup 1x revisi minor. Untuk paket Cinematic/Custom, kami menyediakan sesi <em>live-review</em> dan revisi tak terbatas hingga output benar-benar selaras dengan identitas brand Anda.",
+            "faq.q3": "Apakah saya akan mendapatkan file mentah (Raw Files)?",
+            "faq.a3": "Secara <em>default</em>, yang diserahkan adalah hasil akhir dengan <em>color grading</em> dan resolusi maksimal (4K). Namun, <em>Raw Files</em> dan <em>Project Files</em> (DaVinci/Premiere) dapat disertakan dengan biaya tambahan (buyout clause)."
         }
     },
     en: {
@@ -40,6 +49,14 @@ const resources = {
             "hero.sub": "AI-POWERED VISUAL ARTIST",
             "hero.desc": "I don't just cut clips. I craft cinematic stories, professional photography, and AI-integrated visuals.",
             "hero.btn_work": "VIEW PORTFOLIO"
+            "faq.subtitle": "CLIENT CONCERNS",
+            "faq.title": "Frequently Asked <span class='gradient-text'>Questions</span>",
+            "faq.q1": "What is the estimated turnaround time for a project?",
+            "faq.a1": "Short-form videos typically take 2-3 business days. For Cinematic Stories or Full Brand projects, the process takes 1-2 weeks depending on complexity, as we ensure flawless color grading and <em>sound design</em>.",
+            "faq.q2": "How does the revision process work?",
+            "faq.a2": "We deeply value your vision. Basic packages include 1 minor revision. For Cinematic/Custom packages, we provide <em>live-review</em> sessions and unlimited revisions until the output perfectly aligns with your brand identity.",
+            "faq.q3": "Will I receive the Raw Files?",
+            "faq.a3": "By <em>default</em>, we deliver the final output with full <em>color grading</em> in maximum resolution (4K). However, <em>Raw Files</em> and <em>Project Files</em> (DaVinci/Premiere) can be provided for an additional fee (buyout clause)."
         }
     }
 };
@@ -233,6 +250,33 @@ function initMagneticElements() {
                 duration: 0.8,
                 ease: "elastic.out(1, 0.3)"
             });
+        });
+    });
+}
+// ===== 9. FAQ ACCORDION LOGIC =====
+function initFAQ() {
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    
+    faqBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            
+            // Tutup FAQ lain yang sedang terbuka (opsional, untuk tampilan lebih rapi)
+            faqBtns.forEach(otherBtn => {
+                if (otherBtn !== btn) {
+                    otherBtn.classList.remove('active');
+                    otherBtn.nextElementSibling.classList.remove('open');
+                }
+            });
+
+            // Toggle FAQ yang diklik
+            btn.classList.toggle('active');
+            content.classList.toggle('open');
+            
+            // Update posisi ScrollTrigger GSAP karena tinggi halaman berubah
+            setTimeout(() => {
+                if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+            }, 500); // Tunggu sampai animasi CSS selesai
         });
     });
 }
