@@ -1,4 +1,4 @@
-// ===== 1. DOM READY CHECK =====
+// ===== 1. DOM READY =====
 document.addEventListener('DOMContentLoaded', initApp);
 window.addEventListener('load', completeLoad);
 
@@ -18,7 +18,7 @@ function completeLoad() {
     initPreloader();
 }
 
-// ===== 2. MULTI-LANGUAGE SYSTEM =====
+// ===== 2. MULTI-LANGUAGE =====
 const resources = {
     id: {
         translation: {
@@ -47,7 +47,7 @@ const resources = {
             "tools.cat3_title": "AI-Powered Logic",
             "tools.cat3_desc": "Strategi & narasi setiap proyek diperkuat riset mendalam memakai Gemini, Claude, dan DeepSeek agar hasil tepat sasaran.",
             "work.subtitle": "Visual Impact", "work.title": "Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
-            "work.desc1": "<strong>Masalah:</strong> Klien membutuhkan video perjalanan yang emosional tetapi efisien dalam pengerjaan.<br><br><strong>Solusi:</strong> Menggunakan CapCut, saya memadukan *storytelling* yang kuat dengan pewarnaan yang kohesif dalam resolusi 4K untuk hasil sinematik maksimal.",
+            "work.desc1": "CAPCUT • 4K COLOR GRADING",
             "work.desc2": "Strategi editing beresolusi tinggi dengan retensi tinggi untuk memaksimalkan performa *engagement* di *Short-Form Platforms*.",
             "work.before": "BEFORE (RAW)", "work.after": "AFTER (GRADED)",
             "process.subtitle": "Creative SOP", "process.title": "Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
@@ -126,7 +126,7 @@ const resources = {
             "tools.cat3_title": "AI-Powered Logic",
             "tools.cat3_desc": "Every project's strategy & narrative is strengthened by deep research using Gemini, Claude, and DeepSeek to hit the right audience.",
             "work.subtitle": "Visual Impact", "work.title": "Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
-            "work.desc1": "<strong>Problem:</strong> Client needs an emotional but efficient travel video.<br><br><strong>Solution:</strong> Using CapCut, I blend strong storytelling with cohesive color grading in 4K resolution for maximum cinematic results.",
+            "work.desc1": "CAPCUT • 4K COLOR GRADING",
             "work.desc2": "Resolution-high editing strategy with high retention to maximize engagement performance across Short-Form Platforms.",
             "work.before": "BEFORE (RAW)", "work.after": "AFTER (GRADED)",
             "process.subtitle": "Creative SOP", "process.title": "Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
@@ -207,7 +207,7 @@ function updateContent() {
     });
 }
 
-// ===== 3. PRELOADER & ENTRANCE ANIMATION =====
+// ===== 3. PRELOADER =====
 function initPreloader() {
     if (typeof gsap === 'undefined') return;
     const tl = gsap.timeline();
@@ -232,7 +232,7 @@ function initCursor() {
     });
 }
 
-// ===== 5. SMOOTH SCROLLING =====
+// ===== 5. SMOOTH SCROLL =====
 function initSmoothScroll() {
     if (typeof gsap === 'undefined') return;
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -313,13 +313,32 @@ function initFAQ() {
     });
 }
 
-// ===== 10. COMPARISON SLIDER =====
+// ===== 10. COMPARISON SLIDER (SINKRON) =====
 function initComparisonSlider() {
     const containers = document.querySelectorAll('.comparison-slider-container');
 
     containers.forEach(container => {
         const handle = container.querySelector('.slider-handle');
         const beforeImg = container.querySelector('.before-image');
+        const afterImg = container.querySelector('.after-image');
+        if (!handle || !beforeImg || !afterImg) return;
+
+        // Sinkronkan video
+        let videosReady = 0;
+        const checkReady = () => {
+            videosReady++;
+            if (videosReady === 2) {
+                beforeImg.currentTime = 0;
+                afterImg.currentTime = 0;
+                beforeImg.play().catch(()=>{});
+                afterImg.play().catch(()=>{});
+            }
+        };
+        beforeImg.addEventListener('loadeddata', checkReady);
+        afterImg.addEventListener('loadeddata', checkReady);
+        if (beforeImg.readyState >= 2) checkReady.call(beforeImg);
+        if (afterImg.readyState >= 2) checkReady.call(afterImg);
+
         let active = false;
 
         container.addEventListener('mousedown', () => active = true);
