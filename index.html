@@ -36,10 +36,13 @@
       
       <div class="hidden lg:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-gray-400 items-center">
         <a href="#about" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.about">TENTANG</a>
+        <a href="#tools-journey" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.tools">KEAHLIAN</a>
         <a href="#work" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.works">KARYA</a>
         <a href="#workflow" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.process">PROSES</a>
+        <a href="#project-workflow" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.workflow">ALUR KERJA</a>
         <a href="#journey" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.experience">PERJALANAN</a>
         <a href="#rate-card" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.pricing">HARGA</a>
+        <a href="#updated-rates" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.rates">HARGA BARU</a>
         <a href="#faq" class="nav-link hover:text-cyan-400 transition-colors" data-i18n="nav.faq">FAQ</a>
         
         <select id="langSwitcher" class="bg-transparent text-white rounded outline-none cursor-pointer hover:text-cyan-400 transition-colors text-[10px] font-bold">
@@ -133,6 +136,37 @@
       </div>
     </section>
 
+    <!-- Tools & Skills (About & Professional Journey) -->
+    <section id="tools-journey" class="max-w-6xl mx-auto px-6 py-32">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-violet-500 mb-4" data-i18n="tools.subtitle">How I Work</h2>
+        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="tools.title">Tools & <span class="gradient-text shine-anim">Creative Logic</span></h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="glass p-10 flex flex-col fade-in-up glass-target" style="transition-delay: 100ms;">
+          <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="clapperboard" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="tools.cat1_title">Video & Visual</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tools.cat1_desc">
+            Saya mengandalkan Premiere Pro & DaVinci Resolve untuk color grading sinematik, serta CapCut untuk konten tren yang cepat. Detail visual disempurnakan dengan Lightroom & Canva.
+          </p>
+        </div>
+        <div class="glass p-10 flex flex-col fade-in-up glass-target" style="transition-delay: 200ms;">
+          <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="code-2" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="tools.cat2_title">Tech & Web Dev</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tools.cat2_desc">
+            Membangun web responsif dengan bantuan Blackbox AI & Copilot. Kode bersih, modern, dan mudah dikelola.
+          </p>
+        </div>
+        <div class="glass p-10 flex flex-col fade-in-up glass-target" style="transition-delay: 300ms;">
+          <div class="p-4 glass bg-orange-500/10 text-orange-400 mb-6 w-fit"><i data-lucide="brain" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="tools.cat3_title">AI-Powered Logic</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="tools.cat3_desc">
+            Strategi & narasi setiap proyek diperkuat riset mendalam memakai Gemini, Claude, dan DeepSeek agar hasil tepat sasaran.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="work" class="max-w-6xl mx-auto px-6 py-32">
       <div class="text-center mb-16 fade-in-up">
         <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="work.subtitle">Visual Impact</h2>
@@ -203,6 +237,52 @@
                 <p class="text-xs text-gray-400 leading-relaxed" data-i18n="process.a4">Ekspor resolusi maksimal (4K) dan penyerahan aset via *cloud storage* premium dengan stabilitas tinggi.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Project Workflow (Timeline) -->
+    <section id="project-workflow" class="max-w-6xl mx-auto px-6 py-32">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="workflow.subtitle">Transparent Process</h2>
+        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="workflow.title">Project <span class="gradient-text shine-anim">Workflow</span></h3>
+        <p class="text-gray-400 text-sm max-w-2xl mx-auto mt-6 leading-relaxed" data-i18n="workflow.desc">Setiap tahap saya jalani dengan komunikasi jelas agar kamu selalu update.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 100ms;">
+          <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="message-circle" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step1">01 Client & Inquiry</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc1">Komunikasi via WhatsApp untuk memahami kebutuhan & visi proyekmu.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 200ms;">
+          <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="file-text" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step2">02 Deal & Strategy</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc2">Kesepakatan & rencana kerja disusun rapi via Google Docs & Adobe Acrobat.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 300ms;">
+          <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="hard-drive" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step3">03 Asset Gathering</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc3">Kirim bahan mentah lewat Google Drive terorganisir, aman & mudah.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 400ms;">
+          <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="edit-3" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step4">04 Production</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc4">Proses editing video (Premiere/CapCut) & visual dimulai.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 100ms;">
+          <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="eye" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step5">05 Initial Review</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc5">Draf pertama dikirim, kamu beri masukan untuk revisi.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 200ms;">
+          <div class="p-4 glass bg-violet-500/10 text-violet-400 mb-6 w-fit"><i data-lucide="sparkles" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step6">06 Final Polish</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc6">Finishing: color grading akhir, audio, dan optimasi performa.</p>
+        </div>
+        <div class="glass p-10 flex flex-col text-left fade-in-up glass-target" style="transition-delay: 300ms;">
+          <div class="p-4 glass bg-cyan-500/10 text-cyan-400 mb-6 w-fit"><i data-lucide="send" class="w-6 h-6"></i></div>
+          <h4 class="text-sm font-black text-gray-500 uppercase tracking-widest mb-2" data-i18n="workflow.step7">07 Final Delivery</h4>
+          <p class="text-xs text-gray-400 leading-relaxed" data-i18n="workflow.desc7">Hasil akhir kualitas tinggi dikirim via Google Drive, siap tayang.</p>
+        </div>
+      </div>
     </section>
 
     <section id="journey" class="timeline-section py-32">
@@ -308,6 +388,31 @@
             <a href="#contact" class="w-full py-4 glass text-center text-[10px] font-black hover:bg-white/10 transition-all uppercase tracking-widest mt-auto magnetic-target">Contact Me</a>
           </div>
         </div>
+    </section>
+
+    <!-- Adjusted Rate Card (Harga Terbaru) -->
+    <section id="updated-rates" class="max-w-6xl mx-auto px-6 py-32">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="rates.subtitle">Latest Pricing</h2>
+        <h3 class="text-4xl font-bold uppercase tracking-tighter" data-i18n="rates.title">Adjusted <span class="gradient-text shine-anim">Rate Card</span></h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass p-10 flex flex-col fade-in-up glass-target">
+          <h3 class="text-lg font-bold mb-6 uppercase text-cyan-400" data-i18n="rates.video_title">Video Production</h3>
+          <div class="space-y-4 text-sm text-gray-300">
+            <div class="flex justify-between"><span data-i18n="rates.short">Short Content (TikTok/Reels)</span> <span class="font-bold text-white">Rp250rb – Rp600rb</span></div>
+            <div class="flex justify-between"><span data-i18n="rates.cine">Cinematic Video Editing</span> <span class="font-bold text-white">Mulai Rp1,2jt</span></div>
+            <div class="flex justify-between"><span data-i18n="rates.color">Color Grading & Motion</span> <span class="font-bold text-white">Rp400rb – Rp1jt</span></div>
+          </div>
+        </div>
+        <div class="glass p-10 flex flex-col fade-in-up glass-target" style="transition-delay: 150ms;">
+          <h3 class="text-lg font-bold mb-6 uppercase text-violet-400" data-i18n="rates.web_title">Web & UI/UX</h3>
+          <div class="space-y-4 text-sm text-gray-300">
+            <div class="flex justify-between"><span data-i18n="rates.landing">Landing Page / Portfolio</span> <span class="font-bold text-white">Rp1,5jt – Rp3,5jt</span></div>
+            <div class="flex justify-between"><span data-i18n="rates.uiux">UI/UX Design (Figma/Canva)</span> <span class="font-bold text-white">Rp800rb – Rp2jt</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="faq" class="max-w-4xl mx-auto px-6 py-32">
