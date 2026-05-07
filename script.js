@@ -19,11 +19,11 @@ window.addEventListener('load', () => {
   }
 });
 
-// ===== 2. i18n =====
+// ===== 2. MULTI-LANGUAGE =====
 const resources = {
   id: { translation: {
     "loader.text":"LOADING EXPERIENCE",
-    "nav.about":"TENTANG","nav.tools":"KEAHLIAN","nav.works":"KARYA","nav.process":"PROSES","nav.workflow":"ALUR KERJA","nav.experience":"PERJALANAN","nav.pricing":"HARGA","nav.rates":"HARGA BARU","nav.faq":"FAQ","nav.cta":"HUBUNGI",
+    "nav.about":"TENTANG","nav.tools":"KEAHLIAN","nav.works":"KARYA","nav.process":"PROSES","nav.workflow":"ALUR KERJA","nav.experience":"PERJALANAN","nav.pricing":"HARGA","nav.faq":"FAQ","nav.cta":"HUBUNGI",
     "hero.sub":"SENIMAN VISUAL BERBASIS AI","hero.desc":"Bukan sekadar memotong klip. Saya merangkai cerita sinematik, fotografi profesional, dan visual berbasis AI.","hero.btn_work":"LIHAT KARYA","hero.btn_talk":"LET'S TALK",
     "trust.agencies":"Dipercaya oleh Agensi Top","trust.wedding":"Perencana Pernikahan","trust.documentary":"Kru Dokumenter","trust.brands":"Brand Lintas Industri","trust.creative":"Direktur Kreatif",
     "about.subtitle":"Expertise & Philosophy","about.title":"Merging Tech with <span class='gradient-text shine-anim'>Soul.</span>",
@@ -36,9 +36,6 @@ const resources = {
     "tools.cat1_title":"Video & Visual","tools.cat1_desc":"Saya mengandalkan Premiere Pro & DaVinci Resolve untuk color grading sinematik, serta CapCut untuk konten tren yang cepat. Detail visual disempurnakan dengan Lightroom & Canva.",
     "tools.cat2_title":"Tech & Web Dev","tools.cat2_desc":"Membangun web responsif dengan bantuan Blackbox AI & Copilot. Kode bersih, modern, dan mudah dikelola.",
     "tools.cat3_title":"AI-Powered Logic","tools.cat3_desc":"Strategi & narasi setiap proyek diperkuat riset mendalam memakai Gemini, Claude, dan DeepSeek agar hasil tepat sasaran.",
-    "work.subtitle":"Visual Impact","work.title":"Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
-    "work.desc2":"Strategi editing beresolusi tinggi dengan retensi tinggi untuk memaksimalkan performa *engagement* di *Short-Form Platforms*.",
-    "work.before":"BEFORE (RAW)","work.after":"AFTER (GRADED)",
     "process.subtitle":"Creative SOP","process.title":"Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
     "process.step1":"STEP 01","process.step2":"STEP 02","process.step3":"STEP 03","process.step4":"STEP 04",
     "process.q1":"Discovery & Brief","process.a1":"Sesi mendalam untuk memahami visi, identitas brand, dan tujuan emosional yang ingin Anda capai.",
@@ -63,9 +60,6 @@ const resources = {
     "pricing.cine.desc":"<strong>Cocok untuk:</strong> Wedding, Campaign Video, Documentary, Brand Story<br><br><strong>Included:</strong> Advanced color grading, motion graphics, premium transitions, full sound design, unlimited revisions, 4K export",
     "pricing.full.desc":"<strong>Cocok untuk:</strong> Brand Campaign, Multi-content Strategy, Agency Projects<br><br><strong>Included:</strong> Custom quote, strategi konten, extended collaboration, priority support, white-label option",
     "pricing.best":"Best Value",
-    "rates.subtitle":"Latest Pricing","rates.title":"Adjusted <span class='gradient-text shine-anim'>Rate Card</span>",
-    "rates.video_title":"Video Production","rates.short":"Short Content (TikTok/Reels)","rates.cine":"Cinematic Video Editing","rates.color":"Color Grading & Motion",
-    "rates.web_title":"Web & UI/UX","rates.landing":"Landing Page / Portfolio","rates.uiux":"UI/UX Design (Figma/Canva)",
     "faq.subtitle":"CLIENT CONCERNS","faq.title":"Frequently Asked <span class='gradient-text shine-anim'>Questions</span>",
     "faq.q1":"Berapa lama estimasi pengerjaan project?","faq.a1":"Untuk video Short-Form biasanya memakan waktu 2-3 hari kerja. Sedangkan untuk Cinematic Story/Full Brand, proses memakan waktu 1-2 minggu tergantung kompleksitas, karena kami memastikan pewarnaan dan <em>sound design</em> yang sempurna.",
     "faq.q2":"Bagaimana sistem revisinya?","faq.a2":"Kami sangat menghargai visi Anda. Paket dasar mencakup 1x revisi minor. Untuk paket Cinematic/Custom, kami menyediakan sesi <em>live-review</em> dan revisi tak terbatas hingga output benar-benar selaras dengan identitas brand Anda.",
@@ -74,7 +68,7 @@ const resources = {
   }},
   en: { translation: {
     "loader.text":"LOADING EXPERIENCE",
-    "nav.about":"ABOUT","nav.tools":"SKILLS","nav.works":"WORKS","nav.process":"PROCESS","nav.workflow":"WORKFLOW","nav.experience":"JOURNEY","nav.pricing":"RATES","nav.rates":"NEW RATES","nav.faq":"FAQ","nav.cta":"HIRE ME",
+    "nav.about":"ABOUT","nav.tools":"SKILLS","nav.works":"WORKS","nav.process":"PROCESS","nav.workflow":"WORKFLOW","nav.experience":"JOURNEY","nav.pricing":"RATES","nav.faq":"FAQ","nav.cta":"HIRE ME",
     "hero.sub":"AI-POWERED VISUAL ARTIST","hero.desc":"I don't just cut clips. I craft cinematic stories, professional photography, and AI-integrated visuals.","hero.btn_work":"VIEW PORTFOLIO","hero.btn_talk":"LET'S TALK",
     "trust.agencies":"Trusted by Top Agencies","trust.wedding":"Wedding Planners","trust.documentary":"Documentary Crews","trust.brands":"Brands Across Industries","trust.creative":"Creative Directors",
     "about.subtitle":"Expertise & Philosophy","about.title":"Merging Tech with <span class='gradient-text shine-anim'>Soul.</span>",
@@ -87,9 +81,6 @@ const resources = {
     "tools.cat1_title":"Video & Visual","tools.cat1_desc":"I rely on Premiere Pro & DaVinci Resolve for cinematic color grading, and CapCut for fast-paced trendy content. Visual details are perfected with Lightroom & Canva.",
     "tools.cat2_title":"Tech & Web Dev","tools.cat2_desc":"Building responsive websites with the help of Blackbox AI & Copilot. Clean, modern, and maintainable code.",
     "tools.cat3_title":"AI-Powered Logic","tools.cat3_desc":"Every project's strategy & narrative is strengthened by deep research using Gemini, Claude, and DeepSeek to hit the right audience.",
-    "work.subtitle":"Visual Impact","work.title":"Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
-    "work.desc2":"Resolution-high editing strategy with high retention to maximize engagement performance across Short-Form Platforms.",
-    "work.before":"BEFORE (RAW)","work.after":"AFTER (GRADED)",
     "process.subtitle":"Creative SOP","process.title":"Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
     "process.step1":"STEP 01","process.step2":"STEP 02","process.step3":"STEP 03","process.step4":"STEP 04",
     "process.q1":"Discovery & Brief","process.a1":"Deep session to understand the vision, brand identity, and emotional goals you wish to achieve.",
@@ -114,9 +105,6 @@ const resources = {
     "pricing.cine.desc":"<strong>Suitable for:</strong> Wedding, Campaign Video, Documentary, Brand Story<br><br><strong>Included:</strong> Advanced color grading, motion graphics, premium transitions, full sound design, unlimited revisions, 4K export",
     "pricing.full.desc":"<strong>Suitable for:</strong> Brand Campaign, Multi-content Strategy, Agency Projects<br><br><strong>Included:</strong> Custom quote, content strategy, extended collaboration, priority support, white-label option",
     "pricing.best":"Best Value",
-    "rates.subtitle":"Latest Pricing","rates.title":"Adjusted <span class='gradient-text shine-anim'>Rate Card</span>",
-    "rates.video_title":"Video Production","rates.short":"Short Content (TikTok/Reels)","rates.cine":"Cinematic Video Editing","rates.color":"Color Grading & Motion",
-    "rates.web_title":"Web & UI/UX","rates.landing":"Landing Page / Portfolio","rates.uiux":"UI/UX Design (Figma/Canva)",
     "faq.subtitle":"CLIENT CONCERNS","faq.title":"Frequently Asked <span class='gradient-text shine-anim'>Questions</span>",
     "faq.q1":"What is the estimated turnaround time for a project?","faq.a1":"Short-form videos typically take 2-3 business days. For Cinematic Stories or Full Brand projects, the process takes 1-2 weeks depending on complexity, as we ensure flawless color grading and <em>sound design</em>.",
     "faq.q2":"How does the revision process work?","faq.a2":"We deeply value your vision. Basic packages include 1 minor revision. For Cinematic/Custom packages, we provide <em>live-review</em> sessions and unlimited revisions until the output perfectly aligns with your brand identity.",
@@ -129,22 +117,16 @@ function initI18n() {
   if (typeof i18next === 'undefined') return;
   i18next.init({ lng: localStorage.getItem('lang') || 'id', resources, fallbackLng: 'en' }, () => {
     updateContent();
-    const langSwitcher = document.getElementById('langSwitcher');
-    const langSwitcherMobile = document.getElementById('langSwitcherMobile');
-    if (langSwitcher) langSwitcher.value = i18next.language;
-    if (langSwitcherMobile) langSwitcherMobile.value = i18next.language;
+    document.getElementById('langSwitcher').value = i18next.language;
+    document.getElementById('langSwitcherMobile').value = i18next.language;
   });
-
-  const langSwitcher = document.getElementById('langSwitcher');
-  if (langSwitcher) {
-    langSwitcher.addEventListener('change', (e) => {
-      i18next.changeLanguage(e.target.value, () => {
-        updateContent();
-        localStorage.setItem('lang', e.target.value);
-        document.getElementById('langSwitcherMobile').value = e.target.value;
-      });
+  document.getElementById('langSwitcher').addEventListener('change', (e) => {
+    i18next.changeLanguage(e.target.value, () => {
+      updateContent();
+      localStorage.setItem('lang', e.target.value);
+      document.getElementById('langSwitcherMobile').value = e.target.value;
     });
-  }
+  });
 }
 
 function updateContent() {
@@ -152,151 +134,96 @@ function updateContent() {
     const key = el.getAttribute('data-i18n');
     if (key) el.innerHTML = i18next.t(key);
   });
+  if (typeof lucide !== 'undefined') lucide.createIcons();
 }
 
 function initCursor() {
   const cursor = document.getElementById('cursor');
   if (!cursor || typeof gsap === 'undefined') return;
-  document.addEventListener('mousemove', (e) => {
-    gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15, ease: "power2.out" });
-  });
-  const hoverElements = document.querySelectorAll('a, button, select, .glass, .magnetic-target');
-  hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.style.transform = 'scale(3)';
-      cursor.style.backgroundColor = 'rgba(0, 242, 254, 0.8)';
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.style.transform = 'scale(1)';
-      cursor.style.backgroundColor = '#fff';
-    });
+  document.addEventListener('mousemove', (e) => gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.15 }));
+  document.querySelectorAll('a, button, select, .glass, .magnetic-target').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.transform='scale(3)'; cursor.style.backgroundColor='rgba(0,242,254,0.8)'; });
+    el.addEventListener('mouseleave', () => { cursor.style.transform='scale(1)'; cursor.style.backgroundColor='#fff'; });
   });
 }
 
 function initSmoothScroll() {
   if (typeof gsap === 'undefined') return;
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      if (!targetId) return;
-      const target = document.getElementById(targetId);
+      const id = this.getAttribute('href').substring(1);
+      if (!id) return;
+      const target = document.getElementById(id);
       if (target) gsap.to(window, { duration: 1.2, scrollTo: { y: target, offsetY: 80 }, ease: "power3.inOut" });
     });
   });
 }
 
 function registerGSAP() {
-  if (typeof ScrollTrigger === 'undefined' || typeof gsap === 'undefined') return;
+  if (typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
   const nav = document.querySelector('nav');
   if (nav) {
-    ScrollTrigger.create({
-      trigger: "#home", start: "top top", end: "bottom top",
-      onUpdate: (self) => {
-        if (self.progress > 0.1) nav.classList.add('bg-black/40', 'backdrop-blur-xl', 'border-b', 'border-white/10');
-        else nav.classList.remove('bg-black/40', 'backdrop-blur-xl', 'border-b', 'border-white/10');
-      }
-    });
+    ScrollTrigger.create({ trigger: "#home", start: "top top", end: "bottom top", onUpdate: (self) => {
+      if (self.progress > 0.1) nav.classList.add('bg-black/40','backdrop-blur-xl','border-b','border-white/10');
+      else nav.classList.remove('bg-black/40','backdrop-blur-xl','border-b','border-white/10');
+    }});
   }
-  gsap.utils.toArray('section:not(#home) .fade-in-up').forEach(element => {
-    gsap.to(element, {
-      scrollTrigger: { trigger: element, start: "top 85%", toggleActions: "play none none none" },
-      opacity: 1, y: 0, duration: 1, ease: "power3.out"
-    });
+  gsap.utils.toArray('section:not(#home) .fade-in-up').forEach(el => {
+    gsap.to(el, { scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }, opacity: 1, y: 0, duration: 1, ease: "power3.out" });
   });
 }
 
 function initMagneticElements() {
   if (typeof gsap === 'undefined') return;
-  const magnets = document.querySelectorAll('.magnetic-target, .glass-target');
-  magnets.forEach(magnet => {
-    magnet.addEventListener('mousemove', (e) => {
-      const rect = magnet.getBoundingClientRect();
-      const x = (e.clientX - rect.left - rect.width / 2) * 0.1;
-      const y = (e.clientY - rect.top - rect.height / 2) * 0.1;
-      gsap.to(magnet, { x: x, y: y, duration: 0.5, ease: "power2.out" });
+  document.querySelectorAll('.magnetic-target, .glass-target').forEach(m => {
+    m.addEventListener('mousemove', (e) => {
+      const r = m.getBoundingClientRect();
+      gsap.to(m, { x: (e.clientX - r.left - r.width/2)*0.1, y: (e.clientY - r.top - r.height/2)*0.1, duration: 0.5 });
     });
-    magnet.addEventListener('mouseleave', () => {
-      gsap.to(magnet, { x: 0, y: 0, duration: 0.8, ease: "elastic.out(1, 0.3)" });
-    });
+    m.addEventListener('mouseleave', () => gsap.to(m, { x: 0, y: 0, duration: 0.8, ease: "elastic.out(1,0.3)" }));
   });
 }
 
 function initFAQ() {
-  const faqBtns = document.querySelectorAll('.faq-btn');
-  faqBtns.forEach(btn => {
+  document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const content = btn.nextElementSibling;
-      faqBtns.forEach(otherBtn => {
-        if (otherBtn !== btn) {
-          otherBtn.classList.remove('active');
-          otherBtn.nextElementSibling.classList.remove('open');
-        }
-      });
-      btn.classList.toggle('active');
-      content.classList.toggle('open');
+      document.querySelectorAll('.faq-btn').forEach(b => { if(b!==btn){ b.classList.remove('active'); b.nextElementSibling.classList.remove('open'); } });
+      btn.classList.toggle('active'); content.classList.toggle('open');
       setTimeout(() => { if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh(); }, 500);
     });
   });
 }
 
 function initComparisonSlider() {
-  const containers = document.querySelectorAll('.comparison-slider-container');
-  containers.forEach(container => {
-    const handle = container.querySelector('.slider-handle');
-    const beforeImg = container.querySelector('.before-image');
-    const afterImg = container.querySelector('.after-image');
-    if (!handle || !beforeImg || !afterImg) return;
-
-    let videosReady = 0;
-    const checkReady = () => {
-      videosReady++;
-      if (videosReady === 2) {
-        beforeImg.currentTime = 0;
-        afterImg.currentTime = 0;
-        beforeImg.play().catch(() => {});
-        afterImg.play().catch(() => {});
-      }
-    };
-    beforeImg.addEventListener('loadeddata', checkReady);
-    afterImg.addEventListener('loadeddata', checkReady);
-    if (beforeImg.readyState >= 2) checkReady.call(beforeImg);
-    if (afterImg.readyState >= 2) checkReady.call(afterImg);
-
+  document.querySelectorAll('.comparison-slider-container').forEach(c => {
+    const h = c.querySelector('.slider-handle'), b = c.querySelector('.before-image'), a = c.querySelector('.after-image');
+    if (!h||!b||!a) return;
+    let ready = 0;
+    const check = () => { ready++; if(ready===2){ b.currentTime=0; a.currentTime=0; b.play().catch(()=>{}); a.play().catch(()=>{}); } };
+    b.addEventListener('loadeddata', check); a.addEventListener('loadeddata', check);
+    if(b.readyState>=2) check.call(b); if(a.readyState>=2) check.call(a);
     let active = false;
-    container.addEventListener('mousedown', () => active = true);
-    container.addEventListener('mouseup', () => active = false);
-    container.addEventListener('mouseleave', () => active = false);
-    container.addEventListener('touchstart', () => active = true);
-    container.addEventListener('touchend', () => active = false);
-    container.addEventListener('touchcancel', () => active = false);
-
-    const moveSlider = (e) => {
-      if (!active) return;
-      const position = container.getBoundingClientRect();
-      let x = (e.touches ? e.touches[0].clientX : e.clientX) - position.left;
-      x = Math.max(0, Math.min(x, position.width));
-      const percentage = (x / position.width) * 100;
-      gsap.to(handle, { left: percentage + '%', duration: 0.1, ease: 'power2.out' });
-      gsap.to(beforeImg, { clipPath: `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`, duration: 0.1, ease: 'power2.out' });
+    c.addEventListener('mousedown', ()=>active=true); c.addEventListener('mouseup', ()=>active=false);
+    c.addEventListener('mouseleave', ()=>active=false); c.addEventListener('touchstart', ()=>active=true);
+    c.addEventListener('touchend', ()=>active=false); c.addEventListener('touchcancel', ()=>active=false);
+    const move = (e) => {
+      if(!active) return;
+      const r = c.getBoundingClientRect();
+      let x = (e.touches?e.touches[0].clientX:e.clientX) - r.left;
+      x = Math.max(0, Math.min(x, r.width));
+      const p = (x/r.width)*100;
+      gsap.to(h, { left: p+'%', duration: 0.1 }); gsap.to(b, { clipPath: `polygon(0 0, ${p}% 0, ${p}% 100%, 0 100%)`, duration: 0.1 });
     };
-    container.addEventListener('mousemove', moveSlider);
-    container.addEventListener('touchmove', moveSlider);
+    c.addEventListener('mousemove', move); c.addEventListener('touchmove', move);
   });
 }
 
-// Mobile menu functions
-function toggleMobileMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-function closeMobileMenu() {
-  document.getElementById('mobileMenu').classList.remove('open');
-}
+// Mobile menu
+function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
 function switchLangMobile(lang) {
-  i18next.changeLanguage(lang, () => {
-    updateContent();
-    localStorage.setItem('lang', lang);
-    document.getElementById('langSwitcher').value = lang;
-  });
+  i18next.changeLanguage(lang, () => { updateContent(); localStorage.setItem('lang', lang); document.getElementById('langSwitcher').value = lang; });
 }
