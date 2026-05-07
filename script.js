@@ -36,11 +36,14 @@ const resources = {
     "tools.cat1_title":"Video & Visual","tools.cat1_desc":"Saya mengandalkan Premiere Pro & DaVinci Resolve untuk color grading sinematik, serta CapCut untuk konten tren yang cepat. Detail visual disempurnakan dengan Lightroom & Canva.",
     "tools.cat2_title":"Tech & Web Dev","tools.cat2_desc":"Membangun web responsif dengan bantuan Blackbox AI & Copilot. Kode bersih, modern, dan mudah dikelola.",
     "tools.cat3_title":"AI-Powered Logic","tools.cat3_desc":"Strategi & narasi setiap proyek diperkuat riset mendalam memakai Gemini, Claude, dan DeepSeek agar hasil tepat sasaran.",
+    "work.subtitle":"Visual Impact","work.title":"Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
+    "work.desc2":"Strategi editing beresolusi tinggi dengan retensi tinggi untuk memaksimalkan performa *engagement* di *Short-Form Platforms*.",
+    "work.before":"BEFORE (RAW)","work.after":"AFTER (GRADED)",
     "process.subtitle":"Creative SOP","process.title":"Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
     "process.step1":"STEP 01","process.step2":"STEP 02","process.step3":"STEP 03","process.step4":"STEP 04",
     "process.q1":"Discovery & Brief","process.a1":"Sesi mendalam untuk memahami visi, identitas brand, dan tujuan emosional yang ingin Anda capai.",
     "process.q2":"AI Generation","process.a2":"Menggunakan AI (Midjourney/Firefly) untuk menciptakan aset visual unik, *storyboard*, atau referensi visual.",
-    "process.q3":"Post-Production","process.a3":"Proses inti: editing cepat, *advanced color grading* (DaVinci/Resolve), dan *sound design* sinematik.",
+    "process.q3":"Post-Production","process.a3":"Proses inti: editing cepat, *advanced color grading* (DaVinci/CapCut), dan *sound design* sinematik.",
     "process.q4":"Final Delivery","process.a4":"Ekspor resolusi maksimal (4K) dan penyerahan aset via *cloud storage* premium dengan stabilitas tinggi.",
     "workflow.subtitle":"Transparent Process","workflow.title":"Project <span class='gradient-text shine-anim'>Workflow</span>","workflow.desc":"Setiap tahap saya jalani dengan komunikasi jelas agar kamu selalu update.",
     "workflow.step1":"01 Client & Inquiry","workflow.desc1":"Komunikasi via WhatsApp untuk memahami kebutuhan & visi proyekmu.",
@@ -53,13 +56,16 @@ const resources = {
     "journey.title":"Professional <span class='gradient-text shine-anim'>Journey</span>",
     "journey.role1":"UI/UX Designer & Web Developer","journey.desc1_1":"Merancang & membangun ekosistem digital premium berbasis kolaborasi AI (Gemini, Blackbox, Canva).","journey.desc1_2":"Mengintegrasikan <em>live prototyping</em> dan desain UI interaktif untuk <em>user experience</em> kelas atas.","journey.desc1_3":"Mengelola infrastruktur arsitektur web hingga <em>deployment</em> global via GitHub & Netlify.",
     "journey.role2":"Lead Content Specialist & Editor","journey.desc2_1":"Mengelola <em>end-to-end</em> produksi konten harian perjalanan ibadah Umroh.","journey.desc2_2":"Memadukan efisiensi <em>post-production</em> dengan gaya penceritaan sinematik (CapCut).","journey.desc2_3":"Fokus menyajikan narasi emosional yang sukses meningkatkan <em>engagement</em> audiens.",
-    "journey.role3":"Freelance Visual Creator","journey.desc3_1":"Menerjemahkan visi klien lintas industri menjadi mahakarya visual dan video komersial.","journey.desc3_2":"Dipercaya memimpin eksekusi dokumentasi premium (Wedding, Graduation, Corporate).","journey.desc3_3":"Merumuskan identitas visual & tata warna brand menggunakan Adobe Lightroom dan Canva.",
+    "journey.role3":"Freelance Visual Creator","journey.desc3_1":"Menerjemahkan visi klien lintas industri menjadi mahakarya visual dan video komersial.","journey.desc3_2":"Dipercaya memimpin eksekusi dokumentasi premium (Wedding, Travel, Graduation, Corporate).","journey.desc3_3":"Merumuskan identitas visual & tata warna brand menggunakan Adobe Lightroom dan Canva.",
     "journey.role4":"Videographer, Editor & Crew","journey.desc4_1":"Titik awal pendalaman seni <em>visual storytelling</em> dan dinamika lapangan produksi dokumenter.","journey.desc4_2":"Berperan krusial merakit <em>raw footage</em> menjadi narasi visual yang kohesif via DaVinci Resolve.","journey.desc4_3":"Bertanggung jawab atas kelancaran operasional dan dokumentasi esensial <em>Behind the Scenes</em>.",
     "pricing.subtitle":"Investment","pricing.title":"Our Rate <span class='gradient-text shine-anim'>Card</span>","pricing.desc":"Setiap paket dirancang untuk memberikan nilai maksimal. Pilih sesuai kebutuhan Anda atau diskusikan custom solution.",
     "pricing.short.desc":"<strong>Cocok untuk:</strong> TikTok, Reels, YouTube Shorts<br><br><strong>Included:</strong> Editing profesional, color grading dasar, transisi smooth, background music, 1x revision",
     "pricing.cine.desc":"<strong>Cocok untuk:</strong> Wedding, Campaign Video, Documentary, Brand Story<br><br><strong>Included:</strong> Advanced color grading, motion graphics, premium transitions, full sound design, unlimited revisions, 4K export",
     "pricing.full.desc":"<strong>Cocok untuk:</strong> Brand Campaign, Multi-content Strategy, Agency Projects<br><br><strong>Included:</strong> Custom quote, strategi konten, extended collaboration, priority support, white-label option",
     "pricing.best":"Best Value",
+    "rates.subtitle":"Latest Pricing","rates.title":"Adjusted <span class='gradient-text shine-anim'>Rate Card</span>",
+    "rates.video_title":"Video Production","rates.short":"Short Content (TikTok/Reels)","rates.cine":"Cinematic Video Editing","rates.color":"Color Grading & Motion",
+    "rates.web_title":"Web & UI/UX","rates.landing":"Landing Page / Portfolio","rates.uiux":"UI/UX Design (Figma/Canva)",
     "faq.subtitle":"CLIENT CONCERNS","faq.title":"Frequently Asked <span class='gradient-text shine-anim'>Questions</span>",
     "faq.q1":"Berapa lama estimasi pengerjaan project?","faq.a1":"Untuk video Short-Form biasanya memakan waktu 2-3 hari kerja. Sedangkan untuk Cinematic Story/Full Brand, proses memakan waktu 1-2 minggu tergantung kompleksitas, karena kami memastikan pewarnaan dan <em>sound design</em> yang sempurna.",
     "faq.q2":"Bagaimana sistem revisinya?","faq.a2":"Kami sangat menghargai visi Anda. Paket dasar mencakup 1x revisi minor. Untuk paket Cinematic/Custom, kami menyediakan sesi <em>live-review</em> dan revisi tak terbatas hingga output benar-benar selaras dengan identitas brand Anda.",
@@ -81,11 +87,14 @@ const resources = {
     "tools.cat1_title":"Video & Visual","tools.cat1_desc":"I rely on Premiere Pro & DaVinci Resolve for cinematic color grading, and CapCut for fast-paced trendy content. Visual details are perfected with Lightroom & Canva.",
     "tools.cat2_title":"Tech & Web Dev","tools.cat2_desc":"Building responsive websites with the help of Blackbox AI & Copilot. Clean, modern, and maintainable code.",
     "tools.cat3_title":"AI-Powered Logic","tools.cat3_desc":"Every project's strategy & narrative is strengthened by deep research using Gemini, Claude, and DeepSeek to hit the right audience.",
+    "work.subtitle":"Visual Impact","work.title":"Color Grading & <span class='gradient-text shine-anim'>AI Art</span> Mastery",
+    "work.desc2":"Resolution-high editing strategy with high retention to maximize engagement performance across Short-Form Platforms.",
+    "work.before":"BEFORE (RAW)","work.after":"AFTER (GRADED)",
     "process.subtitle":"Creative SOP","process.title":"Our <span class='gradient-text shine-anim'>Collaborative</span> Process",
     "process.step1":"STEP 01","process.step2":"STEP 02","process.step3":"STEP 03","process.step4":"STEP 04",
     "process.q1":"Discovery & Brief","process.a1":"Deep session to understand the vision, brand identity, and emotional goals you wish to achieve.",
     "process.q2":"AI Generation","process.a2":"Using AI (Midjourney/Firefly) to create unique visual assets, storyboards, or visual references.",
-    "process.q3":"Post-Production","process.a3":"Core process: fast editing, advanced color grading (DaVinci/Resolve), and cinematic sound design.",
+    "process.q3":"Post-Production","process.a3":"Core process: fast editing, advanced color grading (DaVinci/CapCut), and cinematic sound design.",
     "process.q4":"Final Delivery","process.a4":"Maximum resolution export (4K) and delivery of assets via premium cloud storage with high stability.",
     "workflow.subtitle":"Transparent Process","workflow.title":"Project <span class='gradient-text shine-anim'>Workflow</span>","workflow.desc":"I keep every step clear so you're always in the loop.",
     "workflow.step1":"01 Client & Inquiry","workflow.desc1":"Initial chat via WhatsApp to understand your needs and vision.",
@@ -98,13 +107,16 @@ const resources = {
     "journey.title":"Professional <span class='gradient-text shine-anim'>Journey</span>",
     "journey.role1":"UI/UX Designer & Web Developer","journey.desc1_1":"Designing & building a premium digital ecosystem based on AI collaboration (Gemini, Blackbox, Canva).","journey.desc1_2":"Integrating <em>live prototyping</em> and interactive UI design for a high-end <em>user experience</em>.","journey.desc1_3":"Managing web architecture infrastructure for global <em>deployment</em> via GitHub & Netlify.",
     "journey.role2":"Lead Content Specialist & Editor","journey.desc2_1":"Managing <em>end-to-end</em> daily content production for spiritual Umrah journeys.","journey.desc2_2":"Combining *post-production* efficiency with a cinematic storytelling style (CapCut).","journey.desc2_3":"Focusing on delivering emotional narratives that successfully increase audience <em>engagement</em>.",
-    "journey.role3":"Freelance Visual Creator","journey.desc3_1":"Translating vision of clients across industries into visual masterpieces and commercial videos.","journey.desc3_2":"Trusted to lead the execution of premium documentation (Wedding, Graduation, Corporate).","journey.desc3_3":"Formulating visual identity & brand color grade using Adobe Lightroom and Canva.",
+    "journey.role3":"Freelance Visual Creator","journey.desc3_1":"Translating vision of clients across industries into visual masterpieces and commercial videos.","journey.desc3_2":"Trusted to lead the execution of premium documentation (Wedding, Travel, Graduation, Corporate).","journey.desc3_3":"Formulating visual identity & brand color grade using Adobe Lightroom and Canva.",
     "journey.role4":"Videographer, Editor & Crew","journey.desc4_1":"Starting point of deepening the art of <em>visual storytelling</em> and documentary production field dynamics.","journey.desc4_2":"Played a crucial role in assembling <em>raw footage</em> into a cohesive visual narrative via DaVinci Resolve.","journey.desc4_3":"Responsible for operational flow and essential <em>Behind the Scenes</em> documentation.",
     "pricing.subtitle":"Investment","pricing.title":"Our Rate <span class='gradient-text shine-anim'>Card</span>","pricing.desc":"Every package is designed to provide maximum value. Select according to your needs or discuss a custom solution.",
     "pricing.short.desc":"<strong>Suitable for:</strong> TikTok, Reels, YouTube Shorts<br><br><strong>Included:</strong> Professional editing, basic color grading, smooth transitions, background music, 1x revision",
     "pricing.cine.desc":"<strong>Suitable for:</strong> Wedding, Campaign Video, Documentary, Brand Story<br><br><strong>Included:</strong> Advanced color grading, motion graphics, premium transitions, full sound design, unlimited revisions, 4K export",
     "pricing.full.desc":"<strong>Suitable for:</strong> Brand Campaign, Multi-content Strategy, Agency Projects<br><br><strong>Included:</strong> Custom quote, content strategy, extended collaboration, priority support, white-label option",
     "pricing.best":"Best Value",
+    "rates.subtitle":"Latest Pricing","rates.title":"Adjusted <span class='gradient-text shine-anim'>Rate Card</span>",
+    "rates.video_title":"Video Production","rates.short":"Short Content (TikTok/Reels)","rates.cine":"Cinematic Video Editing","rates.color":"Color Grading & Motion",
+    "rates.web_title":"Web & UI/UX","rates.landing":"Landing Page / Portfolio","rates.uiux":"UI/UX Design (Figma/Canva)",
     "faq.subtitle":"CLIENT CONCERNS","faq.title":"Frequently Asked <span class='gradient-text shine-anim'>Questions</span>",
     "faq.q1":"What is the estimated turnaround time for a project?","faq.a1":"Short-form videos typically take 2-3 business days. For Cinematic Stories or Full Brand projects, the process takes 1-2 weeks depending on complexity, as we ensure flawless color grading and <em>sound design</em>.",
     "faq.q2":"How does the revision process work?","faq.a2":"We deeply value your vision. Basic packages include 1 minor revision. For Cinematic/Custom packages, we provide <em>live-review</em> sessions and unlimited revisions until the output perfectly aligns with your brand identity.",
@@ -118,13 +130,17 @@ function initI18n() {
   i18next.init({ lng: localStorage.getItem('lang') || 'id', resources, fallbackLng: 'en' }, () => {
     updateContent();
     document.getElementById('langSwitcher').value = i18next.language;
-    document.getElementById('langSwitcherMobile').value = i18next.language;
+    if (document.getElementById('langSwitcherMobile')) {
+      document.getElementById('langSwitcherMobile').value = i18next.language;
+    }
   });
   document.getElementById('langSwitcher').addEventListener('change', (e) => {
     i18next.changeLanguage(e.target.value, () => {
       updateContent();
       localStorage.setItem('lang', e.target.value);
-      document.getElementById('langSwitcherMobile').value = e.target.value;
+      if (document.getElementById('langSwitcherMobile')) {
+        document.getElementById('langSwitcherMobile').value = e.target.value;
+      }
     });
   });
 }
@@ -134,9 +150,10 @@ function updateContent() {
     const key = el.getAttribute('data-i18n');
     if (key) el.innerHTML = i18next.t(key);
   });
-  if (typeof lucide !== 'undefined') lucide.createIcons();
+  if (typeof lucide !== 'undefined') setTimeout(() => lucide.createIcons(), 10);
 }
 
+// ===== 3. CUSTOM CURSOR =====
 function initCursor() {
   const cursor = document.getElementById('cursor');
   if (!cursor || typeof gsap === 'undefined') return;
@@ -147,6 +164,7 @@ function initCursor() {
   });
 }
 
+// ===== 4. SMOOTH SCROLL =====
 function initSmoothScroll() {
   if (typeof gsap === 'undefined') return;
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -160,6 +178,7 @@ function initSmoothScroll() {
   });
 }
 
+// ===== 5. SCROLL TRIGGER =====
 function registerGSAP() {
   if (typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
@@ -175,6 +194,7 @@ function registerGSAP() {
   });
 }
 
+// ===== 6. MAGNETIC ELEMENTS =====
 function initMagneticElements() {
   if (typeof gsap === 'undefined') return;
   document.querySelectorAll('.magnetic-target, .glass-target').forEach(m => {
@@ -186,6 +206,7 @@ function initMagneticElements() {
   });
 }
 
+// ===== 7. FAQ ACCORDION =====
 function initFAQ() {
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -197,6 +218,7 @@ function initFAQ() {
   });
 }
 
+// ===== 8. COMPARISON SLIDER (SINKRON) =====
 function initComparisonSlider() {
   document.querySelectorAll('.comparison-slider-container').forEach(c => {
     const h = c.querySelector('.slider-handle'), b = c.querySelector('.before-image'), a = c.querySelector('.after-image');
@@ -221,9 +243,41 @@ function initComparisonSlider() {
   });
 }
 
-// Mobile menu
-function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+// ===== 9. MOBILE MENU =====
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
+  if (!menu || !btn) return;
+  menu.classList.toggle('open');
+  btn.classList.toggle('open');
+  const icon = btn.querySelector('i');
+  if (icon) {
+    if (menu.classList.contains('open')) {
+      icon.setAttribute('data-lucide', 'x');
+    } else {
+      icon.setAttribute('data-lucide', 'menu');
+    }
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+  document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
+  if (menu) menu.classList.remove('open');
+  if (btn) {
+    btn.classList.remove('open');
+    const icon = btn.querySelector('i');
+    if (icon) icon.setAttribute('data-lucide', 'menu');
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  }
+  document.body.style.overflow = '';
+}
 function switchLangMobile(lang) {
-  i18next.changeLanguage(lang, () => { updateContent(); localStorage.setItem('lang', lang); document.getElementById('langSwitcher').value = lang; });
+  if (typeof i18next === 'undefined') return;
+  i18next.changeLanguage(lang, () => {
+    updateContent();
+    localStorage.setItem('lang', lang);
+    document.getElementById('langSwitcher').value = lang;
+  });
 }
