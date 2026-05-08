@@ -75,7 +75,7 @@
     <!-- Hero with video background -->
     <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
       <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-        <source src="assets/video/bg-main.mp4" type="video/mp4">
+        <source src="assets/video/Cine%20Test%20V2.mp4" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-black/50 z-0"></div>
       <div class="fade-in-up mb-8 inline-flex items-center gap-2 px-5 py-2 glass text-[10px] font-black text-cyan-400 uppercase tracking-[0.2em] float relative z-10" data-i18n="hero.sub">SENIMAN VISUAL BERBASIS AI</div>
@@ -101,7 +101,7 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- About (dengan efek dynamic island) -->
     <section id="about" class="max-w-6xl mx-auto px-6 py-24 md:py-32">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-left">
         <div class="fade-in-up">
@@ -115,20 +115,41 @@
           </div>
         </div>
         <div class="glass p-8 grid grid-cols-1 gap-6 fade-in-up glass-target">
-          <div class="flex items-start gap-4"><div class="p-3 glass bg-cyan-500/10 text-cyan-400"><i data-lucide="zap" class="w-5 h-5"></i></div><div><h4 class="font-bold text-sm" data-i18n="about.role1_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role1_desc"></p></div></div>
-          <div class="flex items-start gap-4"><div class="p-3 glass bg-violet-500/10 text-violet-400"><i data-lucide="camera" class="w-5 h-5"></i></div><div><h4 class="font-bold text-sm" data-i18n="about.role2_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role2_desc"></p></div></div>
-          <div class="flex items-start gap-4"><div class="p-3 glass bg-orange-500/10 text-orange-400"><i data-lucide="cpu" class="w-5 h-5"></i></div><div><h4 class="font-bold text-sm" data-i18n="about.role3_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role3_desc"></p></div></div>
+          <div class="about-card flex items-start gap-4 p-3 rounded-3xl transition-all duration-300 hover:scale-[1.02] hover:bg-white/5 hover:border-cyan-400/30 border border-transparent cursor-default">
+            <div class="p-3 glass bg-cyan-500/10 text-cyan-400 transition-transform duration-300 group-hover:scale-110"><i data-lucide="zap" class="w-5 h-5"></i></div>
+            <div><h4 class="font-bold text-sm" data-i18n="about.role1_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role1_desc"></p></div>
+          </div>
+          <div class="about-card flex items-start gap-4 p-3 rounded-3xl transition-all duration-300 hover:scale-[1.02] hover:bg-white/5 hover:border-cyan-400/30 border border-transparent cursor-default">
+            <div class="p-3 glass bg-violet-500/10 text-violet-400 transition-transform duration-300 group-hover:scale-110"><i data-lucide="camera" class="w-5 h-5"></i></div>
+            <div><h4 class="font-bold text-sm" data-i18n="about.role2_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role2_desc"></p></div>
+          </div>
+          <div class="about-card flex items-start gap-4 p-3 rounded-3xl transition-all duration-300 hover:scale-[1.02] hover:bg-white/5 hover:border-cyan-400/30 border border-transparent cursor-default">
+            <div class="p-3 glass bg-orange-500/10 text-orange-400 transition-transform duration-300 group-hover:scale-110"><i data-lucide="cpu" class="w-5 h-5"></i></div>
+            <div><h4 class="font-bold text-sm" data-i18n="about.role3_title"></h4><p class="text-xs text-gray-500" data-i18n="about.role3_desc"></p></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Tools & Skills -->
+    <!-- Tools & Skills (dynamic island) -->
     <section id="tools-journey" class="max-w-6xl mx-auto px-6 py-24 md:py-32">
       <div class="text-center mb-12 fade-in-up"><h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-violet-500 mb-4" data-i18n="tools.subtitle"></h2><h3 class="text-3xl font-bold uppercase" data-i18n="tools.title"></h3></div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass p-8 fade-in-up"><div class="p-3 glass bg-cyan-500/10 text-cyan-400 mb-4 w-fit"><i data-lucide="clapperboard" class="w-5 h-5"></i></div><h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat1_title"></h4><p class="text-xs text-gray-500" data-i18n="tools.cat1_desc"></p></div>
-        <div class="glass p-8 fade-in-up"><div class="p-3 glass bg-violet-500/10 text-violet-400 mb-4 w-fit"><i data-lucide="code-2" class="w-5 h-5"></i></div><h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat2_title"></h4><p class="text-xs text-gray-500" data-i18n="tools.cat2_desc"></p></div>
-        <div class="glass p-8 fade-in-up"><div class="p-3 glass bg-orange-500/10 text-orange-400 mb-4 w-fit"><i data-lucide="brain" class="w-5 h-5"></i></div><h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat3_title"></h4><p class="text-xs text-gray-500" data-i18n="tools.cat3_desc"></p></div>
+        <div class="glass p-8 fade-in-up hover:scale-[1.03] hover:shadow-cyan-500/10 transition-all duration-300 cursor-default">
+          <div class="p-3 glass bg-cyan-500/10 text-cyan-400 mb-4 w-fit transition-transform duration-300 group-hover:scale-110"><i data-lucide="clapperboard" class="w-5 h-5"></i></div>
+          <h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat1_title"></h4>
+          <p class="text-xs text-gray-500" data-i18n="tools.cat1_desc"></p>
+        </div>
+        <div class="glass p-8 fade-in-up hover:scale-[1.03] hover:shadow-cyan-500/10 transition-all duration-300 cursor-default">
+          <div class="p-3 glass bg-violet-500/10 text-violet-400 mb-4 w-fit transition-transform duration-300 group-hover:scale-110"><i data-lucide="code-2" class="w-5 h-5"></i></div>
+          <h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat2_title"></h4>
+          <p class="text-xs text-gray-500" data-i18n="tools.cat2_desc"></p>
+        </div>
+        <div class="glass p-8 fade-in-up hover:scale-[1.03] hover:shadow-cyan-500/10 transition-all duration-300 cursor-default">
+          <div class="p-3 glass bg-orange-500/10 text-orange-400 mb-4 w-fit transition-transform duration-300 group-hover:scale-110"><i data-lucide="brain" class="w-5 h-5"></i></div>
+          <h4 class="text-xs font-black text-gray-400 uppercase mb-2" data-i18n="tools.cat3_title"></h4>
+          <p class="text-xs text-gray-500" data-i18n="tools.cat3_desc"></p>
+        </div>
       </div>
     </section>
 
@@ -140,10 +161,10 @@
         <p class="text-gray-400 text-sm max-w-2xl mx-auto mt-4">Kumpulan karya terbaik dalam color grading, editing cinematic, dan konten viral.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Maharani -->
+        <!-- Maharani Cinematic -->
         <div class="glass p-6 flex flex-col gap-4 fade-in-up glass-target">
           <div class="aspect-[9/16] rounded-2xl overflow-hidden bg-black/20">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778043163/maharani_hmioqh.mov"></video>
+            <video class="w-full h-full object-cover lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778043163/maharani_hmioqh.mp4"></video>
           </div>
           <div class="text-left">
             <span class="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-400">CAPCUT • 4K COLOR GRADING</span>
@@ -154,7 +175,7 @@
         <!-- Salma Aulia -->
         <div class="glass p-6 flex flex-col gap-4 fade-in-up glass-target">
           <div class="aspect-[9/16] rounded-2xl overflow-hidden bg-black/20">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778043739/Salma_Aulia_NOWM_1_rvv8se.mp4"></video>
+            <video class="w-full h-full object-cover lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778043739/Salma_Aulia_NOWM_1_rvv8se.mp4"></video>
           </div>
           <div class="text-left">
             <span class="text-[10px] font-black uppercase tracking-[0.2em] text-pink-400">INSTAGRAM REELS</span>
@@ -165,7 +186,7 @@
         <!-- Yuki Tour -->
         <div class="glass p-6 flex flex-col gap-4 fade-in-up glass-target">
           <div class="aspect-[9/16] rounded-2xl overflow-hidden bg-black/20">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778160364/yukitour_ig_ianfxx.mp4"></video>
+            <video class="w-full h-full object-cover lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778160364/yukitour_ig_ianfxx.mp4"></video>
           </div>
           <div class="text-left">
             <span class="text-[10px] font-black uppercase tracking-[0.2em] text-orange-400">CINEMATIC TRAVEL EDIT</span>
@@ -176,7 +197,7 @@
         <!-- Cinematic Miwaa -->
         <div class="glass p-6 flex flex-col gap-4 fade-in-up glass-target">
           <div class="aspect-[9/16] rounded-2xl overflow-hidden bg-black/20">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778051234/26_Feb_-_Cinematic_Miwaa_WM_de0s2x.mp4"></video>
+            <video class="w-full h-full object-cover lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778051234/26_Feb_-_Cinematic_Miwaa_WM_de0s2x.mp4"></video>
           </div>
           <div class="text-left">
             <span class="text-[10px] font-black uppercase tracking-[0.2em] text-violet-400">VIRAL REELS • SHORT FORM</span>
@@ -194,8 +215,8 @@
         <p class="text-gray-500 text-sm">Geser untuk melihat perubahan before & after</p>
       </div>
       <div class="max-w-md mx-auto glass overflow-hidden relative aspect-[9/16] comparison-slider-container">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover comparison-image after-image" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778100942/CIne_Test_V2_m64jqe.mov"></video>
-        <video autoplay loop muted playsinline class="w-full h-full object-cover comparison-image before-image" src="https://res.cloudinary.com/de2tlhnd6/video/upload/v1778101733/before_ddkv2w.mp4"></video>
+        <video class="w-full h-full object-cover comparison-image after-image lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778100942/CIne_Test_V2_m64jqe.mp4"></video>
+        <video class="w-full h-full object-cover comparison-image before-image lazy-video" muted loop playsinline preload="none" src="https://res.cloudinary.com/de2tlhnd6/video/upload/f_auto,q_auto/v1778101733/before_ddkv2w.mp4"></video>
         <div class="slider-handle"></div>
         <div class="before-after-label before text-[10px] font-black text-cyan-400">BEFORE (RAW)</div>
         <div class="before-after-label after text-[10px] font-black text-violet-400">AFTER (GRADED)</div>
@@ -227,7 +248,7 @@
       </div>
     </section>
 
-    <!-- Journey -->
+    <!-- Journey (timeline dengan perbaikan box) -->
     <section id="journey" class="timeline-section py-20 md:py-32">
       <div class="timeline-container">
         <h2 class="timeline-title uppercase tracking-tighter fade-in-up" data-i18n="journey.title"></h2>
@@ -240,7 +261,7 @@
       </div>
     </section>
 
-    <!-- Rate Card (Gabungan) -->
+    <!-- Rate Card (Gabungan, tanpa duplikasi) -->
     <section id="rate-card" class="max-w-6xl mx-auto px-6 py-24 md:py-32">
       <div class="text-center mb-12 fade-in-up"><h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-400 mb-4" data-i18n="pricing.subtitle"></h2><h3 class="text-3xl font-bold uppercase" data-i18n="pricing.title"></h3><p class="text-gray-400 text-sm max-w-2xl mx-auto mt-4" data-i18n="pricing.desc"></p></div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
