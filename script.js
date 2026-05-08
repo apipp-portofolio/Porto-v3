@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticElements();
   initFAQ();
   initComparisonSlider();
+  initLazyVideos();
 });
 
 window.addEventListener('load', () => {
@@ -243,7 +244,26 @@ function initComparisonSlider() {
   });
 }
 
-// ===== 9. MOBILE MENU =====
+// ===== 9. LAZY VIDEO LOADING =====
+function initLazyVideos() {
+  const lazyVideos = document.querySelectorAll('.lazy-video');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const video = entry.target;
+          video.play().catch(() => {});
+          observer.unobserve(video);
+        }
+      });
+    }, { threshold: 0.1 });
+    lazyVideos.forEach(video => observer.observe(video));
+  } else {
+    lazyVideos.forEach(video => video.play().catch(() => {}));
+  }
+}
+
+// ===== 10. MOBILE MENU =====
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   const btn = document.getElementById('hamburgerBtn');
